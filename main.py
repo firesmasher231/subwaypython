@@ -7,10 +7,10 @@ accounts =[]
 
 ## Get random emails
 
-NumberofEmails = 10
+NumberofEmails = 1
 i= 0
 genCounter = 0
-filename = "accounts2.json"
+filename = "accounts.json"
 squadCode = "b1iufn"
 referralCode = "X-62KJW7O"
 squadName = "Subway Squad"
