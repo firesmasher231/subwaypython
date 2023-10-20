@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import requests
 import censusname
 import time
@@ -12,13 +12,14 @@ CORS(app)
 @app.route('/')
 def get_accounts_data():
     try:
-        # Assuming the JSON file is in the same directory as your script
-        json_file_path = './accounts.json'
+        # # Assuming the JSON file is in the same directory as your script
+        # json_file_path = './accounts.json'
 
-        # Load JSON data
-        with open(json_file_path, 'r') as file:
-            data = json.load(file)
+        # # Load JSON data
+        # with open(json_file_path, 'r') as file:
+        #     data = json.load(file)
             
+        return render_template('index.html')
 
         # Serve the JSON data
         return jsonify(data)
