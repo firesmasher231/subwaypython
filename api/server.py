@@ -287,4 +287,6 @@ def generate_accounts():
     return jsonify({"message": "Accounts generated and written to file", "accounts": accounts})
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=3000)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=3000)
+    # app.run(debug=True, host='0.0.0.0', port=3000)
