@@ -17,7 +17,8 @@ def get_accounts_data(request):
 
         # Load JSON data
         with open(json_file_path, 'r') as file:
-            data = json.load(file)
+            data = json.loads(file)
+            
 
         # Serve the JSON data
         return jsonify(data)
@@ -27,7 +28,7 @@ def get_accounts_data(request):
 
 
 
-@app.route('/delete-account', methods=['POST'])
+@app.route('/delete-account', methods=['GET', 'POST'])
 def delete_accounts():
     try:
 
@@ -36,15 +37,23 @@ def delete_accounts():
 
         # Load accounts data which is in accounts.json file but is in a list of json objects
         with open(json_file_path, 'r') as file:
-            accounts = list(jsonify(json.load(file)))
+            data = json.load(file)
             
-            for account in accounts:
-                if account['email'] == request.json['email']:
-                    accounts.remove(account)
-                    
-                    return jsonify({'message': 'Account deleted successfully', 'accounts': accounts})
-                else:
-                    return jsonify({'message': 'Account not found'})
+        # Get the email from the request
+        email = request.args.get('email')
+        
+        # Loop through the list of json objects and delete the one with the email that matches the email from the request
+        for i in range(len(data)):
+            if data[i]['email'] == email:
+                del data[i]
+                break
+
+        # Save the updated list of json objects to the json file
+        with open(json_file_path, 'w') as file:
+            json.dump(data, file)
+
+        # Serve the JSON data
+        return jsonify(data)
 
 
     except Exception as e:
