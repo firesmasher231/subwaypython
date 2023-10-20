@@ -19,7 +19,7 @@ def get_accounts_data():
         # with open(json_file_path, 'r') as file:
         #     data = json.load(file)
             
-        return render_template('index.html')
+        return render_template('./index.html')
 
         # Serve the JSON data
         return jsonify(data)
