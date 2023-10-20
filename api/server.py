@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def get_accounts_data(request):
+def get_accounts_data():
     try:
         # Assuming the JSON file is in the same directory as your script
         json_file_path = './accounts.json'
