@@ -7,7 +7,7 @@ accounts =[]
 
 ## Get random emails
 
-NumberofEmails = 1
+NumberofEmails = 100
 i= 0
 genCounter = 0
 filename = "accounts.json"
