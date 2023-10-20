@@ -10,16 +10,21 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
+def index():
+    try:
+        return render_template('index.html')
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+@app.route('/get-accounts', methods=['GET'])
 def get_accounts_data():
     try:
-        # # Assuming the JSON file is in the same directory as your script
-        # json_file_path = './accounts.json'
+        # Assuming the JSON file is in the same directory as your script
+        json_file_path = './accounts.json'
 
-        # # Load JSON data
-        # with open(json_file_path, 'r') as file:
-        #     data = json.load(file)
-            
-        return render_template('./index.html')
+        # Load JSON data
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
 
         # Serve the JSON data
         return jsonify(data)

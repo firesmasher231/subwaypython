@@ -26,6 +26,9 @@
 		<pre id="accounts"></pre>
 
 		<script>
+			// var ip = "http://127.0.0.1:3000"
+			var ip = "http://132.226.131.86:3000";
+
 			// Function to display accounts as JSON
 			function displayAccounts(accounts) {
 				var accountsElement = document.getElementById("accounts");
@@ -34,7 +37,7 @@
 
 			// Function to fetch and display accounts
 			function fetchAccounts() {
-				fetch("http://127.0.0.1:3000/")
+				fetch(ip + "/get-accounts")
 					.then((response) => response.json())
 					.then((data) => {
 						displayAccounts(data);
@@ -54,7 +57,7 @@
 					event.preventDefault();
 					var email = document.getElementById("deleteEmail").value;
 
-					fetch("http://127.0.0.1:3000/delete-account?email=" + email, {
+					fetch(ip + "/delete-account?email=" + email, {
 						method: "POST",
 					})
 						.then((response) => response.json())
@@ -84,13 +87,9 @@
 						.value.trim();
 
 					if (numberofemails.match(/^\d+$/)) {
-						fetch(
-							"http://127.0.0.1:3000/generate-accounts?numberofemails=" +
-								numberofemails,
-							{
-								method: "POST",
-							}
-						)
+						fetch(ip + "/generate-accounts?numberofemails=" + numberofemails, {
+							method: "POST",
+						})
 							.then((response) => response.json())
 							.then((data) => {
 								if (data.error) {
