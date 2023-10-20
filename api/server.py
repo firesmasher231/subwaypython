@@ -59,12 +59,15 @@ def delete_accounts():
     except Exception as e:
         return jsonify({'error': str(e)})
 
-@app.route('/generate-accounts', methods=['GET'])
+@app.route('/generate-accounts', methods=['POST'])
 def generate_accounts():
     accounts = []
 
+    NumberofEmails = request.args.get('numberofemails')
+    print( "Received request to generate emails: " + str(NumberofEmails))
+
     # Get random emails
-    NumberofEmails = 3
+    # NumberofEmails = 3
     i = 0
     genCounter = 0
     filename = "accounts.json"
