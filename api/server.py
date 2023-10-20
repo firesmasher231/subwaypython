@@ -17,7 +17,7 @@ def get_accounts_data():
 
         # Load JSON data
         with open(json_file_path, 'r') as file:
-            data = json.loads(file)
+            data = json.load(file)
             
 
         # Serve the JSON data
