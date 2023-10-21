@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Management</title>
+</head>
+<body>
+    <h1>Account Management.</h1>
+    
+    <h2>Delete Account</h2>
+    <form id="deleteAccountForm">
+        <label for="deleteEmail">Email:</label>
+        <input type="text" id="deleteEmail" name="email" required>
+        <button type="submit">Delete Account</button>
+    </form>
+    <div id="deleteResult"></div>
+
+    <h2>Create New Account</h2>
+    <textarea id="generateEmails" placeholder="Enter the number of accounts to generate"></textarea>
+    <button id="generateAccountsButton">Generate New Accounts</button>
+    <div id="generateResult"></div>
+
+    <h2>Accounts</h2>
+    <div id="accounts"></div>
+
+    <script>
+        // var ip = "http://127.0.0.1:3000";
+        var ip = "http://132.226.131.86:3000";
+
+        // Function to display accounts as JSON
+        function displayAccounts(accounts) {
+            var accountsElement = document.getElementById("accounts");
+            accountsElement.innerHTML = ""; // Clear previous content
+            accounts.forEach(function(account) {
+                var accountDiv = document.createElement("div");
+                accountDiv.innerHTML = '<pre>' + JSON.stringify(account, null, 2) + '</pre>';
+                if (account.qrcode) {
+                    var qrCodeImg = document.createElement("img");
+                    qrCodeImg.src = account.qrcode;
+                    qrCodeImg.style.width = "100px"; // Set the width as per your preference
+                    accountDiv.appendChild(qrCodeImg);
+                }
+                accountsElement.appendChild(accountDiv);
+            });
+        }
+
+        // Function to fetch and display accounts
+        function fetchAccounts() {
+            fetch(ip + "/get-all-accounts")
+                .then((response) => response.json())
+                .then((data) => {
+                    displayAccounts(data);
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        }
+
+        // Initial fetch of accounts
+        fetchAccounts();
+
+        // Delete Account Form
+        document
+            .getElementById("deleteAccountForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+                var email = document.getElementById("deleteEmail").value;
+
+                fetch(ip + "/delete-account?email=" + email, {
+                    method: "POST",
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        if (data.error) {
+                            document.getElementById("deleteResult").textContent =
+                                "Error: " + data.error;
+                        } else {
+                            document.getElementById("deleteResult").textContent =
+                                "Account deleted successfully.";
+                            fetchAccounts(); // Refresh account list
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                        document.getElementById("deleteResult").textContent =
+                            "An error occurred while deleting the account.";
+                    });
+            });
+
+        // Generate New Accounts Button
+        document
+            .getElementById("generateAccountsButton")
+            .addEventListener("click", function () {
+                var numberofemails = document
+                    .getElementById("generateEmails")
+                    .value.trim();
+
+                if (numberofemails.match(/^\d+$/)) {
+                    fetch(ip + "/generate-accounts?numberofemails=" + numberofemails, {
+                        method: "POST",
+                    })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (data.error) {
+                                document.getElementById("generateResult").textContent =
+                                    "Error: " + data.error;
+                            } else {
+                                document.getElementById("generateResult").textContent =
+                                    "New accounts generated successfully.";
+                                fetchAccounts(); // Refresh account list
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Error:", error);
+                            document.getElementById("generateResult").textContent =
+                                "An error occurred while generating new accounts.";
+                        });
+                } else {
+                    document.getElementById("generateResult").textContent =
+                        "Please enter a valid number of accounts to generate.";
+                }
+            });
+    </script>
+</body>
+</html>

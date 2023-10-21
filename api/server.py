@@ -3,11 +3,14 @@ import requests
 import censusname
 import time
 import re
+import random
 import json
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+
+past_accounts = []
 
 @app.route('/')
 def index():
@@ -16,7 +19,14 @@ def index():
     except Exception as e:
         return jsonify({'error': str(e)})
 
-@app.route('/get-accounts', methods=['GET'])
+@app.route('/admin')
+def admin():
+    try:
+        return render_template('admin.html')
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+@app.route('/get-all-accounts', methods=['GET'])
 def get_accounts_data():
     try:
         # Assuming the JSON file is in the same directory as your script
@@ -28,6 +38,32 @@ def get_accounts_data():
 
         # Serve the JSON data
         return jsonify(data)
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+# make route to get one random account, implement logic to make sure it is not in the last 5 accounts served previously
+@app.route('/get-random-account', methods=['GET'])
+def get_random_account():
+    try:
+        # Assuming the JSON file is in the same directory as your script
+        json_file_path = './accounts.json'
+
+        # Load JSON data
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+
+        randomnum = random.randint(0, len(data) - 1)
+
+        account = data[randomnum]
+
+        if account in past_accounts:
+            return get_random_account()
+        else:
+            past_accounts.append(account)
+            if len(past_accounts) > 5:
+                past_accounts.pop(0)
+            return jsonify(account)    
+
     except Exception as e:
         return jsonify({'error': str(e)})
 
