@@ -78,7 +78,7 @@ def generate_accounts():
     genCounter = 0
     filename = "accounts.json"
     squadCode = "b1iufn"
-    referralCode = "X-62KJW7O"
+    referralCode = "X-63632KO"
     squadName = "Subway Squad"
 
     url = 'https://www.1secmail.com/api/v1/?action=genRandomMailbox&count=' + str(NumberofEmails)

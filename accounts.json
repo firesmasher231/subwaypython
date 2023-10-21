@@ -1,1 +1,502 @@
-[{"email": "odph9ynhas0@icznn.com", "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ2MjA0LCJ0cmFkZXJJZCI6IjE3NDcyNzE3NyIsInVzZXJOYW1lIjoib2RwaDl5bmhhczBAaWN6bm4uY29tIiwiaWF0IjoxNjk3ODQyNjA0LCJ1c2VySWQiOiIxNzQ3MjcxNzciLCJwcm9ncmFtSWQiOiI2In0.FIO8Um_yguiVL8iyVYcvTQd4H9I3vCwlSm1GuhVrur8", "masterToken": "ZjIzMzM0Y2Y4NzRlNDYyYThlNWMyOWJhN2MyYmEzMWY=", "loyaltyId": "6338450267051131", "qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450267051131", "points": 250, "squadCode": "b1iufn", "referralCode": "X-62KJW7O"}, {"email": "y0pz52iasy@icznn.com", "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ2MjE1LCJ0cmFkZXJJZCI6IjE3NDcyNzE3OCIsInVzZXJOYW1lIjoieTBwejUyaWFzeUBpY3pubi5jb20iLCJpYXQiOjE2OTc4NDI2MTUsInVzZXJJZCI6IjE3NDcyNzE3OCIsInByb2dyYW1JZCI6IjYifQ.OazRBZUPLH-dlEHGgAQ0aiy2ybHGHoloQDD3CA8QQE4", "masterToken": "Nzg5MGQzZWMxY2U5NGFhYjkyM2NlYTA3ZjcwMTUwMjM=", "loyaltyId": "6338450279533936", "qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450279533936", "points": 250, "squadCode": "b1iufn", "referralCode": "X-62KJW7O"}]
+[
+	{
+		"email": "iij8bqqrw0@icznn.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NjMxLCJ0cmFkZXJJZCI6IjE3NDcyNzIwMCIsInVzZXJOYW1lIjoiaWlqOGJxcXJ3MEBpY3pubi5jb20iLCJpYXQiOjE2OTc4NDQwMzEsInVzZXJJZCI6IjE3NDcyNzIwMCIsInByb2dyYW1JZCI6IjYifQ.LNrmYqWYoFDRg9z7FaB4Wc0aV0SCGnoNQnNdWSl10p0",
+		"masterToken": "MTc3MmRhNmUxZDhkNDZhOTgxZTg4OWJhMzE4MWY4MTg=",
+		"loyaltyId": "6338450263012491",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450263012491",
+		"points": 250,
+		"squadCode": "b1iufn",
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "23r2amwfi8@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NjQxLCJ0cmFkZXJJZCI6IjE3NDcyNzIwMSIsInVzZXJOYW1lIjoiMjNyMmFtd2ZpOEB2anV1bS5jb20iLCJpYXQiOjE2OTc4NDQwNDEsInVzZXJJZCI6IjE3NDcyNzIwMSIsInByb2dyYW1JZCI6IjYifQ.BNZfkEpdmyl_0CxNI_xZV8Ohtr7Ah-EC1tP5iPzEOY0",
+		"masterToken": "NTVkZjlmZmEzNDJlNDhkM2I5NjFhZDg3Y2Y1OWMxYzk=",
+		"loyaltyId": "6338450210471402",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450210471402",
+		"points": 250,
+		"squadCode": "b1iufn",
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "olimccyrc@icznn.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NjUyLCJ0cmFkZXJJZCI6IjE3NDcyNzIwMiIsInVzZXJOYW1lIjoib2xpbWNjeXJjQGljem5uLmNvbSIsImlhdCI6MTY5Nzg0NDA1MiwidXNlcklkIjoiMTc0NzI3MjAyIiwicHJvZ3JhbUlkIjoiNiJ9.SM_h6z0ZbplZ071BtwOLpenq48tYVQOyHh33UuUVz7I",
+		"masterToken": "MzlhMGRiZDNkMTA0NGFiN2I1ZDY2ZWExMmE0OWY4YmI=",
+		"loyaltyId": "6338450281623899",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450281623899",
+		"points": 250,
+		"squadCode": "b1iufn",
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "hyukufy@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NjYzLCJ0cmFkZXJJZCI6IjE3NDcyNzIwNCIsInVzZXJOYW1lIjoiaHl1a3VmeUBlenp0dC5jb20iLCJpYXQiOjE2OTc4NDQwNjMsInVzZXJJZCI6IjE3NDcyNzIwNCIsInByb2dyYW1JZCI6IjYifQ.xWuiXsEH4124yxYIk1LfhLMpvf6a_8KI-57rA3MRS5Q",
+		"masterToken": "MmUzY2MyY2IzZjQ0NGQwMzk1OTA3YWJiOTU2NGYxOTE=",
+		"loyaltyId": "6338450281224904",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450281224904",
+		"points": 250,
+		"squadCode": "b1iufn",
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "yfzhaqk0ln@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3Njc0LCJ0cmFkZXJJZCI6IjE3NDcyNzIwNSIsInVzZXJOYW1lIjoieWZ6aGFxazBsbkB2anV1bS5jb20iLCJpYXQiOjE2OTc4NDQwNzQsInVzZXJJZCI6IjE3NDcyNzIwNSIsInByb2dyYW1JZCI6IjYifQ.vHcOZAeCMX7MLrKiGC_LBw3iYxYM7Oj0J0rubc_xlBg",
+		"masterToken": "YTkzYWNmNTYyM2UzNDhhOWJjOTk3OTRkMmU3Yzg0ZTY=",
+		"loyaltyId": "6338450292032981",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450292032981",
+		"points": 250,
+		"squadCode": "b1iufn",
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "u2izqsh5c@icznn.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3Njg1LCJ0cmFkZXJJZCI6IjE3NDcyNzIwNiIsInVzZXJOYW1lIjoidTJpenFzaDVjQGljem5uLmNvbSIsImlhdCI6MTY5Nzg0NDA4NSwidXNlcklkIjoiMTc0NzI3MjA2IiwicHJvZ3JhbUlkIjoiNiJ9.ozOj9IbJlTM8ufsR8lhN6O-2uW4kq7OwSOrZtx6wSu0",
+		"masterToken": "ZTg2YmEyNWNlYzRmNGJkZTkwNDAwZDlkOWYzZjU4Y2M=",
+		"loyaltyId": "6338450287055500",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450287055500",
+		"points": 250,
+		"squadCode": "b1iufn",
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "qwvafw4r@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3Njk1LCJ0cmFkZXJJZCI6IjE3NDcyNzIwOCIsInVzZXJOYW1lIjoicXd2YWZ3NHJAbGFhZmQuY29tIiwiaWF0IjoxNjk3ODQ0MDk1LCJ1c2VySWQiOiIxNzQ3MjcyMDgiLCJwcm9ncmFtSWQiOiI2In0.CDmZyPfDPhXWFXChnQuyNVeSjCV3ZpF841k4OZ5XAm0",
+		"masterToken": "ZDUyZDI0NTFlMmU0NDVmZTllOGNkZDAwNTFjYzJiMWM=",
+		"loyaltyId": "6338450239805879",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450239805879",
+		"points": 250,
+		"squadCode": "b1iufn",
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "ltm3fwiiwn4@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzA3LCJ0cmFkZXJJZCI6IjE3NDcyNzIwOSIsInVzZXJOYW1lIjoibHRtM2Z3aWl3bjRAZXp6dHQuY29tIiwiaWF0IjoxNjk3ODQ0MTA3LCJ1c2VySWQiOiIxNzQ3MjcyMDkiLCJwcm9ncmFtSWQiOiI2In0.1R-i7KAnun7hxy3cHiCVa_PWLTo481mXR1OwZI3ZmoM",
+		"masterToken": "YjZlOWM2YTA4OWE3NGFhYThlY2IzZjk3NDZiNjExNWY=",
+		"loyaltyId": "6338450256591501",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450256591501",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "nqe47z@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzE4LCJ0cmFkZXJJZCI6IjE3NDcyNzIxMCIsInVzZXJOYW1lIjoibnFlNDd6QGxhYWZkLmNvbSIsImlhdCI6MTY5Nzg0NDExOCwidXNlcklkIjoiMTc0NzI3MjEwIiwicHJvZ3JhbUlkIjoiNiJ9.oqdMHmcsuQc4OC0lAPGn5l2LYbbjg4WV8MVsdgvV2Y4",
+		"masterToken": "NjRmYjQyMTlhODE1NGE1NDhlNWViYTNiNmQ4ZGQ5MzM=",
+		"loyaltyId": "6338450235265722",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450235265722",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "ek22ra0i8@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzI4LCJ0cmFkZXJJZCI6IjE3NDcyNzIxMSIsInVzZXJOYW1lIjoiZWsyMnJhMGk4QGxhYWZkLmNvbSIsImlhdCI6MTY5Nzg0NDEyOCwidXNlcklkIjoiMTc0NzI3MjExIiwicHJvZ3JhbUlkIjoiNiJ9.Q2nqYsl4-zUcVM0FY1lp4QVgG-cLW-zjDyvjwwVyOUo",
+		"masterToken": "ZjNmMDU3MWJkNTM2NDJmNDk4ZGRjMWI4ZWVkYWU4MDQ=",
+		"loyaltyId": "6338450213586339",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450213586339",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "uu8h7z8xxgx@icznn.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzM5LCJ0cmFkZXJJZCI6IjE3NDcyNzIxMiIsInVzZXJOYW1lIjoidXU4aDd6OHh4Z3hAaWN6bm4uY29tIiwiaWF0IjoxNjk3ODQ0MTM5LCJ1c2VySWQiOiIxNzQ3MjcyMTIiLCJwcm9ncmFtSWQiOiI2In0.0b7jPV_fiaDhig_H6q9wqXTE1B2krle_uZ43vBTL1sM",
+		"masterToken": "ZjhmMTY3MDRkNzY3NDM5NzlhNTcxODFjOTc5YjVjMmY=",
+		"loyaltyId": "6338450288253104",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450288253104",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "p7etd617@txcct.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzUwLCJ0cmFkZXJJZCI6IjE3NDcyNzIxMyIsInVzZXJOYW1lIjoicDdldGQ2MTdAdHhjY3QuY29tIiwiaWF0IjoxNjk3ODQ0MTUwLCJ1c2VySWQiOiIxNzQ3MjcyMTMiLCJwcm9ncmFtSWQiOiI2In0.Ltqr-zcQHMz81U07LESLrr9beYw5o28fzTIK9cW6qJQ",
+		"masterToken": "ZDU2NzEzYTc3ZGFkNDlhMmE5NTBlY2MzMTYzMGNmZDI=",
+		"loyaltyId": "6338450244119555",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450244119555",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "7rntv5@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzYxLCJ0cmFkZXJJZCI6IjE3NDcyNzIxNCIsInVzZXJOYW1lIjoiN3JudHY1QGV6enR0LmNvbSIsImlhdCI6MTY5Nzg0NDE2MSwidXNlcklkIjoiMTc0NzI3MjE0IiwicHJvZ3JhbUlkIjoiNiJ9.FiedfQZo-agvStu8Hs_kfwpzGOGyaYlFfIHGmH7o5RA",
+		"masterToken": "NGRhYTI5N2QwYTc5NDJmZGI4ZTA1YWRmYjM4MzIzMGM=",
+		"loyaltyId": "6338450271852888",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450271852888",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "nsddd8gel@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzcxLCJ0cmFkZXJJZCI6IjE3NDcyNzIxNSIsInVzZXJOYW1lIjoibnNkZGQ4Z2VsQGV6enR0LmNvbSIsImlhdCI6MTY5Nzg0NDE3MSwidXNlcklkIjoiMTc0NzI3MjE1IiwicHJvZ3JhbUlkIjoiNiJ9.PsZJkBVF2CqCJuGdaX3vs570ltraQjntYPTIqhzBbOU",
+		"masterToken": "YmJlODY0NjUwNmI1NDllZjkxYWM5OGUzMjA2ZWVlOTU=",
+		"loyaltyId": "6338450258968798",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450258968798",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "nlr7t0io8n0j@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzgyLCJ0cmFkZXJJZCI6IjE3NDcyNzIxNyIsInVzZXJOYW1lIjoibmxyN3QwaW84bjBqQGV6enR0LmNvbSIsImlhdCI6MTY5Nzg0NDE4MiwidXNlcklkIjoiMTc0NzI3MjE3IiwicHJvZ3JhbUlkIjoiNiJ9.Mkrp3Y1eAeTrFw2sCZPG5Dmpbb92cJ_z2AVAITTQA_U",
+		"masterToken": "MmY3Y2Q0ODZiNjAxNDM4YzllYjJjZGRiMWY0MmViMzI=",
+		"loyaltyId": "6338450233515227",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450233515227",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "5gfnw396agke@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3NzkzLCJ0cmFkZXJJZCI6IjE3NDcyNzIxOSIsInVzZXJOYW1lIjoiNWdmbnczOTZhZ2tlQHZqdXVtLmNvbSIsImlhdCI6MTY5Nzg0NDE5MywidXNlcklkIjoiMTc0NzI3MjE5IiwicHJvZ3JhbUlkIjoiNiJ9.RKJtw22qRE2wlY-1UbHRMnEJkLuejA7JsxoETYFnY8c",
+		"masterToken": "MmNjODdhOTJhMDQ0NDUyYzk0OTAyZDIzNmViYTI1NjA=",
+		"loyaltyId": "6338450264496032",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450264496032",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "o6u96u15h7@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODA0LCJ0cmFkZXJJZCI6IjE3NDcyNzIyMCIsInVzZXJOYW1lIjoibzZ1OTZ1MTVoN0Blenp0dC5jb20iLCJpYXQiOjE2OTc4NDQyMDQsInVzZXJJZCI6IjE3NDcyNzIyMCIsInByb2dyYW1JZCI6IjYifQ.NSn6e1nfd-PPJIA75Z-tl80HnRFiUtbCu7dE-VLJz90",
+		"masterToken": "MWVmNzY1YzhkNzhhNDMzODg3MzgwNGJlODhlYTQ4ZmM=",
+		"loyaltyId": "6338450243921928",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450243921928",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "ezgypazv2a@icznn.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODE1LCJ0cmFkZXJJZCI6IjE3NDcyNzIyMSIsInVzZXJOYW1lIjoiZXpneXBhenYyYUBpY3pubi5jb20iLCJpYXQiOjE2OTc4NDQyMTUsInVzZXJJZCI6IjE3NDcyNzIyMSIsInByb2dyYW1JZCI6IjYifQ.WY4QNft0lKpJw3DivAcOFuzgx0cw0de45ofchow9TJE",
+		"masterToken": "ZGUwZmRkOTdiMWEzNDI4Y2I4OWU5ZjRkNjJiOThhMmQ=",
+		"loyaltyId": "6338450286524951",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450286524951",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "cgddh5k@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODI2LCJ0cmFkZXJJZCI6IjE3NDcyNzIyMiIsInVzZXJOYW1lIjoiY2dkZGg1a0BsYWFmZC5jb20iLCJpYXQiOjE2OTc4NDQyMjYsInVzZXJJZCI6IjE3NDcyNzIyMiIsInByb2dyYW1JZCI6IjYifQ.n7_TTdMmpq-TnANV6UtCCW3N-7TlQPY51NQh_iYuYMI",
+		"masterToken": "MDEwNmFmODYyMDczNDEwYzg1ODkzZWYxYzdiZGJkNjQ=",
+		"loyaltyId": "6338450263398189",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450263398189",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "a6w75a@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODM3LCJ0cmFkZXJJZCI6IjE3NDcyNzIyNCIsInVzZXJOYW1lIjoiYTZ3NzVhQGxhYWZkLmNvbSIsImlhdCI6MTY5Nzg0NDIzNywidXNlcklkIjoiMTc0NzI3MjI0IiwicHJvZ3JhbUlkIjoiNiJ9.OcReQ8ZLdaQyyU3sdkL1m-RyWvpYvfJyF7s3Sdh75I0",
+		"masterToken": "OWQzMDc4MjcwYzk2NDk3OWEwMWY5ZWNiZDIyNmM4MDI=",
+		"loyaltyId": "6338450260059255",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450260059255",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "hzly4byyp@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODQ4LCJ0cmFkZXJJZCI6IjE3NDcyNzIyNiIsInVzZXJOYW1lIjoiaHpseTRieXlwQHZqdXVtLmNvbSIsImlhdCI6MTY5Nzg0NDI0OCwidXNlcklkIjoiMTc0NzI3MjI2IiwicHJvZ3JhbUlkIjoiNiJ9.yO3yGmqOMFDASJTvi8FwS1YirXO7atr-Oa0r96RY9I8",
+		"masterToken": "OWI1OTdiZmQ1MjhlNDc4N2I0MjQ1MGM3MThjZDA3ZWU=",
+		"loyaltyId": "6338450257094406",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450257094406",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "o7l7yk34xq@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODU5LCJ0cmFkZXJJZCI6IjE3NDcyNzIyNyIsInVzZXJOYW1lIjoibzdsN3lrMzR4cUB2anV1bS5jb20iLCJpYXQiOjE2OTc4NDQyNTksInVzZXJJZCI6IjE3NDcyNzIyNyIsInByb2dyYW1JZCI6IjYifQ.1Wsjt6JchEA_VejP0Y82e6XCQgmGaffILqxYdJrgX1s",
+		"masterToken": "NzUwODYwZTRiODI2NDc2OTg2YmNhN2Y2MDcxNGZjODQ=",
+		"loyaltyId": "6338450274205050",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450274205050",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "k8melmv0f8t@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODY5LCJ0cmFkZXJJZCI6IjE3NDcyNzIyOCIsInVzZXJOYW1lIjoiazhtZWxtdjBmOHRAdmp1dW0uY29tIiwiaWF0IjoxNjk3ODQ0MjY5LCJ1c2VySWQiOiIxNzQ3MjcyMjgiLCJwcm9ncmFtSWQiOiI2In0.jnM4RvWhw8iQQF5kpVEHvfwjmDO3ngCst7fcILN6tAc",
+		"masterToken": "ZGU0M2U2ZjZmN2E0NDA1ODgxYmUyYzE1N2JlNmFmYjc=",
+		"loyaltyId": "6338450249299246",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450249299246",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "vr92p8hd7xne@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODgwLCJ0cmFkZXJJZCI6IjE3NDcyNzIyOSIsInVzZXJOYW1lIjoidnI5MnA4aGQ3eG5lQGV6enR0LmNvbSIsImlhdCI6MTY5Nzg0NDI4MCwidXNlcklkIjoiMTc0NzI3MjI5IiwicHJvZ3JhbUlkIjoiNiJ9.9x1JTbReDV9plxeS8DMMNS5gNPEm2EfN9dZT6TdPoxc",
+		"masterToken": "NWNiNTY5MjQ1ODlhNDU5YmFlMmNkNTFkYmUwYmM0ZDg=",
+		"loyaltyId": "6338450231964211",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450231964211",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "96cxdrw5ltj@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3ODkyLCJ0cmFkZXJJZCI6IjE3NDcyNzIzMCIsInVzZXJOYW1lIjoiOTZjeGRydzVsdGpAbGFhZmQuY29tIiwiaWF0IjoxNjk3ODQ0MjkyLCJ1c2VySWQiOiIxNzQ3MjcyMzAiLCJwcm9ncmFtSWQiOiI2In0.5jDks9gmKwang7-qfEGqlTdgu5fsMdlWD_uffS8xnPM",
+		"masterToken": "ZWU4Y2E2OTE2YjRjNGQ3YTkxNjg5ZTNmYjRiNWY0YjQ=",
+		"loyaltyId": "6338450275345152",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450275345152",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "lvo9j69q9yrv@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTAyLCJ0cmFkZXJJZCI6IjE3NDcyNzIzMSIsInVzZXJOYW1lIjoibHZvOWo2OXE5eXJ2QGV6enR0LmNvbSIsImlhdCI6MTY5Nzg0NDMwMiwidXNlcklkIjoiMTc0NzI3MjMxIiwicHJvZ3JhbUlkIjoiNiJ9.HuDBe3yG_IaSt_PTG85pKhDEGyeWLM4mA2sfkpZhoBA",
+		"masterToken": "M2Y2MzE4YmQ0MjQxNDlmNThlZjYxMzY0YzJhY2ZhODA=",
+		"loyaltyId": "6338450281224011",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450281224011",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "x2zximd@txcct.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTEzLCJ0cmFkZXJJZCI6IjE3NDcyNzIzMiIsInVzZXJOYW1lIjoieDJ6eGltZEB0eGNjdC5jb20iLCJpYXQiOjE2OTc4NDQzMTMsInVzZXJJZCI6IjE3NDcyNzIzMiIsInByb2dyYW1JZCI6IjYifQ.BVJVps5DncOhyK-xL5IEHIjyFHnMBt_iIdpdBhls2Gc",
+		"masterToken": "MDU0NjZlMWQ1OGQzNGU4Y2FjMzBmN2JlNTVhZjM0N2Q=",
+		"loyaltyId": "6338450216999091",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450216999091",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "gm4cio8@txcct.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTI0LCJ0cmFkZXJJZCI6IjE3NDcyNzIzMyIsInVzZXJOYW1lIjoiZ200Y2lvOEB0eGNjdC5jb20iLCJpYXQiOjE2OTc4NDQzMjQsInVzZXJJZCI6IjE3NDcyNzIzMyIsInByb2dyYW1JZCI6IjYifQ.V3RLgNibZg3_wrR4jQXa0JgeM_UqkZicBbDeJaceVvI",
+		"masterToken": "YjY1MDc1ZDE2NWNlNDhlN2EwNjI0ZGI1ZDY4OTM2NzE=",
+		"loyaltyId": "6338450227735294",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450227735294",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "66wbfprfxa@txcct.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTM1LCJ0cmFkZXJJZCI6IjE3NDcyNzIzNCIsInVzZXJOYW1lIjoiNjZ3YmZwcmZ4YUB0eGNjdC5jb20iLCJpYXQiOjE2OTc4NDQzMzUsInVzZXJJZCI6IjE3NDcyNzIzNCIsInByb2dyYW1JZCI6IjYifQ.RBLKUXgUI3CG7QYLD_ngT43WNuCJ1nnBflRroKaXxHs",
+		"masterToken": "ZThlYmM2YTA0ZTQ4NGM3ZmI1YzM2YzU5NjZlZjU5N2Y=",
+		"loyaltyId": "6338450243171458",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450243171458",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "k8kkoovy3mh@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTQ2LCJ0cmFkZXJJZCI6IjE3NDcyNzIzNiIsInVzZXJOYW1lIjoiazhra29vdnkzbWhAdmp1dW0uY29tIiwiaWF0IjoxNjk3ODQ0MzQ2LCJ1c2VySWQiOiIxNzQ3MjcyMzYiLCJwcm9ncmFtSWQiOiI2In0.sI4CZZcmg97PDSGcI39ox4tR6aVY0f1eMTiis_6MGxQ",
+		"masterToken": "NGEyZGQzM2YyZjM3NDc3N2I1ODYwNWM2MmE0ZDFhOTI=",
+		"loyaltyId": "6338450289611474",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450289611474",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "y1wbcos016y@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTU3LCJ0cmFkZXJJZCI6IjE3NDcyNzIzNyIsInVzZXJOYW1lIjoieTF3YmNvczAxNnlAbGFhZmQuY29tIiwiaWF0IjoxNjk3ODQ0MzU3LCJ1c2VySWQiOiIxNzQ3MjcyMzciLCJwcm9ncmFtSWQiOiI2In0.N1H4NukVDmW47ZFAmfGoBm3a5L2MgLDuHmpR5Q-OXkk",
+		"masterToken": "MjVmNDEzMThmM2RhNDUxM2JkZmYzODNjYzFmOTNmMzQ=",
+		"loyaltyId": "6338450295076126",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450295076126",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "nhu1mv@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTY5LCJ0cmFkZXJJZCI6IjE3NDcyNzIzOCIsInVzZXJOYW1lIjoibmh1MW12QGV6enR0LmNvbSIsImlhdCI6MTY5Nzg0NDM2OSwidXNlcklkIjoiMTc0NzI3MjM4IiwicHJvZ3JhbUlkIjoiNiJ9.45hDrLWNkrLgEutr_MdFKUvZXr5k7HHWPTqktVvytbQ",
+		"masterToken": "YjA1ZWIyOTVlOTU3NDg5ZDhkMTVjZGEzNzgwNjdhZmU=",
+		"loyaltyId": "6338450255186840",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450255186840",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "92jmaee@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTgwLCJ0cmFkZXJJZCI6IjE3NDcyNzIzOSIsInVzZXJOYW1lIjoiOTJqbWFlZUB2anV1bS5jb20iLCJpYXQiOjE2OTc4NDQzODAsInVzZXJJZCI6IjE3NDcyNzIzOSIsInByb2dyYW1JZCI6IjYifQ.GjBg-CS7FEOBKFy0zHy8FkO0ZlsHBrCGkaFQc5oFe_I",
+		"masterToken": "NjJjYzhlODFjYTYzNDE4N2FmMjQ2MTk1ODljY2RlYTQ=",
+		"loyaltyId": "6338450265565397",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450265565397",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "9mn6blz6smsk@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ3OTkxLCJ0cmFkZXJJZCI6IjE3NDcyNzI0MCIsInVzZXJOYW1lIjoiOW1uNmJsejZzbXNrQHZqdXVtLmNvbSIsImlhdCI6MTY5Nzg0NDM5MSwidXNlcklkIjoiMTc0NzI3MjQwIiwicHJvZ3JhbUlkIjoiNiJ9.dliYQd8i6PfBBuDaG6nBx9swM8do-QaCrCNIBzggqfA",
+		"masterToken": "YTMyN2VhMDkxYmEzNDI1NmE2OTFjZGQwNTNhYjU3NWM=",
+		"loyaltyId": "6338450254184523",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450254184523",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "6laah1@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDAzLCJ0cmFkZXJJZCI6IjE3NDcyNzI0MSIsInVzZXJOYW1lIjoiNmxhYWgxQHZqdXVtLmNvbSIsImlhdCI6MTY5Nzg0NDQwMywidXNlcklkIjoiMTc0NzI3MjQxIiwicHJvZ3JhbUlkIjoiNiJ9.3bK6NjkmF_dQ_ithw79la90I0UlhFszkW4xUiba4yFk",
+		"masterToken": "OGIyYWVjMmE3NmIyNDk3Mjg0NjVkNjQwOTkxYWJkNWQ=",
+		"loyaltyId": "6338450215989879",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450215989879",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "azioh7iv@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDE0LCJ0cmFkZXJJZCI6IjE3NDcyNzI0MiIsInVzZXJOYW1lIjoiYXppb2g3aXZAdmp1dW0uY29tIiwiaWF0IjoxNjk3ODQ0NDE0LCJ1c2VySWQiOiIxNzQ3MjcyNDIiLCJwcm9ncmFtSWQiOiI2In0.CG3wIrryg0pRUASccitO_aKtqeuaamWcBnN5bOUHCG0",
+		"masterToken": "MWI2MDBiMDUyYjcyNDM0ZjkyNjRjMmYyY2NkODZlOTI=",
+		"loyaltyId": "6338450247916197",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450247916197",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "drq3kdf@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDI1LCJ0cmFkZXJJZCI6IjE3NDcyNzI0MyIsInVzZXJOYW1lIjoiZHJxM2tkZkBsYWFmZC5jb20iLCJpYXQiOjE2OTc4NDQ0MjUsInVzZXJJZCI6IjE3NDcyNzI0MyIsInByb2dyYW1JZCI6IjYifQ.NTADfaPLevvaQRj82SD3gQK_5fETWKbmT6pJyrSCZa4",
+		"masterToken": "ZGE2N2EwNWQ4MTMyNGIwZWEwMGQ0NjhiN2M5OGVlN2U=",
+		"loyaltyId": "6338450219782395",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450219782395",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "ikhym43@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDM2LCJ0cmFkZXJJZCI6IjE3NDcyNzI0NCIsInVzZXJOYW1lIjoiaWtoeW00M0BsYWFmZC5jb20iLCJpYXQiOjE2OTc4NDQ0MzYsInVzZXJJZCI6IjE3NDcyNzI0NCIsInByb2dyYW1JZCI6IjYifQ.XlWS2kjtRD7n3FXUodwYtyGkjrydYzeaZAUnbCjHFNw",
+		"masterToken": "MjI4MzhhMjNmMWY2NDBiYjhiYWQ0ZGNmM2E0YzZkNWM=",
+		"loyaltyId": "6338450283888326",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450283888326",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "jtogge@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDQ3LCJ0cmFkZXJJZCI6IjE3NDcyNzI0NSIsInVzZXJOYW1lIjoianRvZ2dlQGxhYWZkLmNvbSIsImlhdCI6MTY5Nzg0NDQ0NywidXNlcklkIjoiMTc0NzI3MjQ1IiwicHJvZ3JhbUlkIjoiNiJ9.h4ZFCfWPQ8SJd4vou0YUF7AbIKTM6miu_xsk5r3YVEo",
+		"masterToken": "YmVlYWNhYWVlNDljNGVjNGJmZWUwZGE0YTJhYWIwMmQ=",
+		"loyaltyId": "6338450281711512",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450281711512",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "mnounpo4se30@icznn.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDU4LCJ0cmFkZXJJZCI6IjE3NDcyNzI0NiIsInVzZXJOYW1lIjoibW5vdW5wbzRzZTMwQGljem5uLmNvbSIsImlhdCI6MTY5Nzg0NDQ1OCwidXNlcklkIjoiMTc0NzI3MjQ2IiwicHJvZ3JhbUlkIjoiNiJ9.3mIjipsJDjnzbYnUz_VXa6Kg6yYtryk-BoJLT2xTjn0",
+		"masterToken": "Yzg2NmY4ZTYzNGIxNDkxN2EwN2M3NmE3ZjRlYTNiZDM=",
+		"loyaltyId": "6338450259486782",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450259486782",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "mq1pcm@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDY5LCJ0cmFkZXJJZCI6IjE3NDcyNzI0NyIsInVzZXJOYW1lIjoibXExcGNtQGxhYWZkLmNvbSIsImlhdCI6MTY5Nzg0NDQ2OSwidXNlcklkIjoiMTc0NzI3MjQ3IiwicHJvZ3JhbUlkIjoiNiJ9.jzHiS_bpsogMu8FuNMoxcG5VcqWK9Li5T2olMcCr-58",
+		"masterToken": "NDg4N2U3NTJhZWZmNDE4ODljYTI5YTRkN2QxZTdkNjY=",
+		"loyaltyId": "6338450289480060",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450289480060",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "p6dhzcw45b@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDgwLCJ0cmFkZXJJZCI6IjE3NDcyNzI0OCIsInVzZXJOYW1lIjoicDZkaHpjdzQ1YkB2anV1bS5jb20iLCJpYXQiOjE2OTc4NDQ0ODAsInVzZXJJZCI6IjE3NDcyNzI0OCIsInByb2dyYW1JZCI6IjYifQ.qgEQ_eIKBn5xfVYRysp5XwbZqubQYyt3Oz2Cf8Gy7Y0",
+		"masterToken": "ZmRmNWRiZWYxMWIwNDI1OTg5NzQ2YjFhNjA2NjZjZDA=",
+		"loyaltyId": "6338450273669645",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450273669645",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "lqb36p@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MDkxLCJ0cmFkZXJJZCI6IjE3NDcyNzI0OSIsInVzZXJOYW1lIjoibHFiMzZwQGxhYWZkLmNvbSIsImlhdCI6MTY5Nzg0NDQ5MSwidXNlcklkIjoiMTc0NzI3MjQ5IiwicHJvZ3JhbUlkIjoiNiJ9.MtdbBNgbkJcl9uZYJ8vfoJYKblEMR4xesF4rDpcJMl8",
+		"masterToken": "YTcwNzA3YmYwNzI1NDZmY2FkZjI0MDU2ZjYxNzk0ZjE=",
+		"loyaltyId": "6338450224862489",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450224862489",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "c34qj8iul5j7@icznn.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MTAyLCJ0cmFkZXJJZCI6IjE3NDcyNzI1MCIsInVzZXJOYW1lIjoiYzM0cWo4aXVsNWo3QGljem5uLmNvbSIsImlhdCI6MTY5Nzg0NDUwMiwidXNlcklkIjoiMTc0NzI3MjUwIiwicHJvZ3JhbUlkIjoiNiJ9.NGQfD4JNNLuP1xQiSrOwtMaN7LfSqbvwVbdXigyhmoo",
+		"masterToken": "ZGFkNDhlNmFhMmJiNDM1MmEwMjc4YmViZjkwMjU5YjM=",
+		"loyaltyId": "6338450254509802",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450254509802",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "tz2x48y92puk@txcct.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MTEzLCJ0cmFkZXJJZCI6IjE3NDcyNzI1MSIsInVzZXJOYW1lIjoidHoyeDQ4eTkycHVrQHR4Y2N0LmNvbSIsImlhdCI6MTY5Nzg0NDUxMywidXNlcklkIjoiMTc0NzI3MjUxIiwicHJvZ3JhbUlkIjoiNiJ9.MdlI0NSuafJr9sKVW9oLvtPJvcb_prnX_2hmWgzd6HM",
+		"masterToken": "ZDcwYWViNDk4YzhlNGY4OWFkYzE4NTc3MGM5NWI4Zjk=",
+		"loyaltyId": "6338450298694974",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450298694974",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "uczh1pfwnj@vjuum.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MTI0LCJ0cmFkZXJJZCI6IjE3NDcyNzI1MiIsInVzZXJOYW1lIjoidWN6aDFwZnduakB2anV1bS5jb20iLCJpYXQiOjE2OTc4NDQ1MjQsInVzZXJJZCI6IjE3NDcyNzI1MiIsInByb2dyYW1JZCI6IjYifQ.vXIwE2unT8_16q8UERoi30FczxdABd8cJm6vfCv5cMw",
+		"masterToken": "NmU0MDhjNDA0YTdhNGQ1MDk3YTVmZmM5NzNmNDBiNmQ=",
+		"loyaltyId": "6338450298608446",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450298608446",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "3pb38kuc0@ezztt.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MTM0LCJ0cmFkZXJJZCI6IjE3NDcyNzI1NCIsInVzZXJOYW1lIjoiM3BiMzhrdWMwQGV6enR0LmNvbSIsImlhdCI6MTY5Nzg0NDUzNCwidXNlcklkIjoiMTc0NzI3MjU0IiwicHJvZ3JhbUlkIjoiNiJ9.pMUWzF6bucScr6-L6E4SKvD70_rmApPVUwCQosVIcb0",
+		"masterToken": "MWZjOWUzZmYzNGZmNGQ2ZTkxNjI2ZDc4NjFhOTY3M2M=",
+		"loyaltyId": "6338450267652219",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450267652219",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "8ts6m42euuu@txcct.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MTQ1LCJ0cmFkZXJJZCI6IjE3NDcyNzI1NSIsInVzZXJOYW1lIjoiOHRzNm00MmV1dXVAdHhjY3QuY29tIiwiaWF0IjoxNjk3ODQ0NTQ1LCJ1c2VySWQiOiIxNzQ3MjcyNTUiLCJwcm9ncmFtSWQiOiI2In0.itq9cZfUeRhiMhRXKbnQrtLACXTl0jNVb2YROJjnsL4",
+		"masterToken": "OWNmNTkwYzlhYjFiNDM2OGJkMGEzM2ExNWM2OGQ1NDc=",
+		"loyaltyId": "6338450225492633",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450225492633",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "ytex7swnzm47@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MTU3LCJ0cmFkZXJJZCI6IjE3NDcyNzI1NyIsInVzZXJOYW1lIjoieXRleDdzd256bTQ3QGxhYWZkLmNvbSIsImlhdCI6MTY5Nzg0NDU1NywidXNlcklkIjoiMTc0NzI3MjU3IiwicHJvZ3JhbUlkIjoiNiJ9.TcDxk_F6YR_4S3iaT1rR1DEM85F8PnqG0qgwJmIH-4U",
+		"masterToken": "YmUwZjMzOTllZDFmNDgzOGFlY2ExZTg3ZDRiOTIzZTU=",
+		"loyaltyId": "6338450222098839",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450222098839",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	},
+	{
+		"email": "bh9nh00u@txcct.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MTY3LCJ0cmFkZXJJZCI6IjE3NDcyNzI1OCIsInVzZXJOYW1lIjoiYmg5bmgwMHVAdHhjY3QuY29tIiwiaWF0IjoxNjk3ODQ0NTY3LCJ1c2VySWQiOiIxNzQ3MjcyNTgiLCJwcm9ncmFtSWQiOiI2In0.dBAM7JM-WLYQin9Oye3Vk3m7x0JpjobZJFcWhy_byF8",
+		"masterToken": "ZTYwMGI1N2Y3ZmVjNDYzYmI4YmY1ZjY0MDRlNDQxZWE=",
+		"loyaltyId": "6338450211549685",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450211549685",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	}
+]
