@@ -12,6 +12,8 @@ CORS(app)
 
 past_accounts = []
 
+visitors = []
+
 # Path to your SSL certificate and key files
 cert_file = './certificate.crt'
 key_file = './private.key'
@@ -73,6 +75,9 @@ def get_random_account():
         # Assuming the JSON file is in the same directory as your script
         json_file_path = './accounts.json'
 
+        visitors.append("1")
+        print("Visitors: " + str(len(visitors)))
+
         # Load JSON data
         with open(json_file_path, 'r') as file:
             data = json.load(file)
@@ -87,7 +92,9 @@ def get_random_account():
             past_accounts.append(account)
             if len(past_accounts) > 5:
                 past_accounts.pop(0)
+            
             return jsonify(account)    
+    
 
     except Exception as e:
         return jsonify({'error': str(e)})
