@@ -12,6 +12,10 @@ CORS(app)
 
 past_accounts = []
 
+# Path to your SSL certificate and key files
+cert_file = './certificate.crt'
+key_file = './private.key'
+
 @app.route('/')
 def index():
     try:
@@ -355,5 +359,7 @@ def generate_accounts():
 
 if __name__ == '__main__':
     from waitress import serve
+    # context = (cert_file, key_file)
+    # serve(app, host="0.0.0.0", port=3000, url_scheme='https', ssl_context=context)
     serve(app, host="0.0.0.0", port=3000)
     # app.run(debug=True, host='0.0.0.0', port=3000)
