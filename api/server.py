@@ -19,7 +19,28 @@ def index():
     except Exception as e:
         return jsonify({'error': str(e)})
 
+from functools import wraps
+
+# ADMIN AUTHENTICATION
+
+authorized_users = {
+    'admin': '1990'
+}
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            return ('Unauthorized', 401, {'WWW-Authenticate': 'Basic realm="Login Required"'})
+        return f(*args, **kwargs)
+    return decorated
+
+def check_auth(username, password):
+    return username in authorized_users and password == authorized_users[username]
+
 @app.route('/admin')
+@requires_auth
 def admin():
     try:
         return render_template('admin.html')
@@ -313,9 +334,19 @@ def generate_accounts():
 
         # print(formatting + "Acquired referral code: " + str(referralCode))
 
+    # open accounts.json file and append the new accounts to the file and then write the file
+    with open(filename, "r") as f:
+        # load the json object
+        data = json.load(f)
+        # append the new accounts to the json object
+        data.extend(accounts)
+
+
+
     with open(filename, "w") as f:
         # save as a json object instead of a list of json objects
-        json.dump(accounts, f)
+        json.dump(data, f)
+
 
 
     print(formatting + "Accounts written to file: " + filename)

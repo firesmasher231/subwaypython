@@ -19,7 +19,7 @@
     <button id="generateAccountsButton">Generate New Accounts</button>
     <div id="generateResult"></div>
 
-    <h2>Accounts</h2>
+    <h2 id="accounts-heading">Accounts</h2>
     <div id="accounts"></div>
 
     <script>
@@ -28,6 +28,15 @@
 
         // Function to display accounts as JSON
         function displayAccounts(accounts) {
+            var headingElement = document.getElementById("accounts-heading");
+
+            if (accounts.length == 0) {
+                headingElement.textContent = "No accounts found.";
+                return;
+            } else {
+                headingElement.textContent = "Accounts: " + accounts.length;
+            }
+
             var accountsElement = document.getElementById("accounts");
             accountsElement.innerHTML = ""; // Clear previous content
             accounts.forEach(function(account) {
@@ -95,6 +104,8 @@
                     .value.trim();
 
                 if (numberofemails.match(/^\d+$/)) {
+                    document.getElementById("generateResult").textContent =
+                        "Request to generate accounts sent..."; // Update the message
                     fetch(ip + "/generate-accounts?numberofemails=" + numberofemails, {
                         method: "POST",
                     })
