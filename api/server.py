@@ -56,12 +56,12 @@ def checkAccountInventory():
 
 
 
-@app.route('/')
-def index():
-    try:
-        return render_template('index.html')
-    except Exception as e:
-        return jsonify({'error': str(e)})
+# @app.route('/')
+# def index():
+#     try:
+#         return render_template('index.html')
+#     except Exception as e:
+#         return jsonify({'error': str(e)})
 
 from functools import wraps
 
