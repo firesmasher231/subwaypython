@@ -380,6 +380,7 @@ def generate_accounts(requestedEmails=0):
             "Host": "promocode.tranxactor.com",
             "User-Agent": "okhttp/4.9.0"
         }
+        
 
         response = requests.get(url, headers=headers)
 
