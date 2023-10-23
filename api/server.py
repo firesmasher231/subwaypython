@@ -22,6 +22,12 @@ interval = 60*60
 threshold = 100
 overflow = 10
 
+
+# Path to your SSL certificate and key files
+cert_file = './cert.pem'
+key_file = './privkey.pem'
+
+
 # write formatting but colored in orange and everything after it white
 def orange(text):
     return ("\033[93m {}\033[00m" .format(text))
@@ -49,10 +55,6 @@ def checkAccountInventory():
         generate_accounts((threshold+overflow) - len(data))
 
 
-
-# Path to your SSL certificate and key files
-cert_file = './certificate.crt'
-key_file = './private.key'
 
 @app.route('/')
 def index():
@@ -404,28 +406,17 @@ def generate_accounts(requestedEmails=0):
     
     return jsonify({"message": "Accounts generated and written to file", "accounts": accounts})
 
+
 if __name__ == '__main__':
     from waitress import serve
-    
-    context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-    context.load_cert_chain(certfile=cert_file, keyfile=key_file)
+
     
     scheduler.add_job(id='Scheduled Task', func=checkAccountInventory, trigger="interval", seconds=interval)
     print(info_formatting + "Starting scheduler at frequency: " + str(interval))
     scheduler.start()
 
-    serve(app, host="0.0.0.0", port=3000, url_scheme='https', ssl_context=context)
+    context = (cert_file, key_file)
+    serve(app, host="0.0.0.0", port=3000, url_scheme='https')
 
-# if __name__ == '__main__':
-#     from waitress import serve
-
-    
-#     scheduler.add_job(id='Scheduled Task', func=checkAccountInventory, trigger="interval", seconds=interval)
-#     print(info_formatting + "Starting scheduler at frequency: " + str(interval))
-#     scheduler.start()
-
-#     context = (cert_file, key_file)
-#     serve(app, host="0.0.0.0", port=3000, url_scheme='https', ssl_context=context)
-
-#     # serve(app, host="0.0.0.0", port=3000)
-#     # app.run(debug=True, host='0.0.0.0', port=3000)
+    serve(app, host="0.0.0.0", port=3000)
+    # app.run(debug=True, host='0.0.0.0', port=3000)
