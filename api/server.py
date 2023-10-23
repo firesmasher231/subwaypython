@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, make_response
 import requests
 import censusname
 import time
@@ -9,6 +9,7 @@ from flask_cors import CORS
 from flask_apscheduler import APScheduler
 
 app = Flask(__name__)
+app.secret_key = '1234821ejo9iuhA&$$3unawiuqn23knj'
 CORS(app)
 
 scheduler = APScheduler()
@@ -134,9 +135,7 @@ def get_random_account():
             if len(past_accounts) > 10:
                 past_accounts.pop(0)
             
-            return jsonify(account)    
-    
-
+            return jsonify(account)     
     except Exception as e:
         return jsonify({'error': str(e)})
 
