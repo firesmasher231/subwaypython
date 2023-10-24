@@ -37,11 +37,20 @@ def orange(text):
 def green(text):
     return ("\033[92m {}\033[00m" .format(text))
 
-info_formatting = orange(" | INFO | ")
+from datetime import datetime
+
+def getCurrentTime():
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    return current_time 
+print("Current Time =", getCurrentTime())
+
+def info_formatting():
+    return orange("(" + getCurrentTime() +")" + " | INFO | ")
 
 def checkAccountInventory():
 
-    print(info_formatting + "Running scheduled task to check account inventory")
+    print(info_formatting() + "Running scheduled task to check account inventory")
 
     # Assuming the JSON file is in the same directory as your script
     json_file_path = './accounts.json'
@@ -50,7 +59,7 @@ def checkAccountInventory():
     with open(json_file_path, 'r') as file:
         data = json.load(file)
 
-    print(info_formatting + "Accounts in inventory: " + str(len(data)))
+    print(info_formatting() + "Accounts in inventory: " + str(len(data)))
 
     if len(data) < threshold:
         generate_accounts((threshold+overflow) - len(data))
@@ -91,7 +100,7 @@ def check_auth(username, password):
 def admin():
     try:
         # return render_template('admin.html')
-        print(info_formatting + "Admin authenticated")
+        print(info_formatting() + "Admin authenticated")
     except Exception as e:
         return jsonify({'error': str(e)})
 
@@ -118,7 +127,7 @@ def get_random_account():
         json_file_path = './accounts.json'
 
         visitors.append("1")
-        print(info_formatting+ "Visitors: " + str(len(visitors)))
+        print(info_formatting()+ "Visitors: " + str(len(visitors)))
 
         # Load JSON data
         with open(json_file_path, 'r') as file:
@@ -176,7 +185,7 @@ def generate_accounts(requestedEmails=0):
 
     try:
         NumberofEmails = request.args.get('numberofemails')
-        print(info_formatting +  "Received request to generate emails: " + str(NumberofEmails))
+        print(info_formatting() +  "Received request to generate emails: " + str(NumberofEmails))
     except Exception as e:
         NumberofEmails = requestedEmails
 
@@ -412,7 +421,7 @@ if __name__ == '__main__':
 
     
     scheduler.add_job(id='Scheduled Task', func=checkAccountInventory, trigger="interval", seconds=interval)
-    print(info_formatting + "Starting scheduler at frequency: " + str(interval))
+    print(info_formatting() + "Starting scheduler at frequency: " + str(interval))
     scheduler.start()
 
     context = (cert_file, key_file)
