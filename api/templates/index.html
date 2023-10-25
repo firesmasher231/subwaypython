@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SubSavers 🥪</title>
     <style>
         h1 {
+            font-size: 28px;
             color: black;
         }
         body {
@@ -11,32 +13,37 @@
             text-align: center;
             background-color: #61A848; /* Subway Green Background */
             color: #FFFFFF; /* White Text */
+
+            padding: 2rem;
         }
         #container {
             background-color: #FFFFFF; /* White Container */
             border-radius: 15px;
             padding: 20px;
-            margin: 20px auto;
             text-align: center;
-            max-width: 300px;
+            margin: 0 auto;
+            /* width: 100%; Set the container to full width */
+            max-width: 400px;
         }
         #accountInfo {
             margin: 20px;
         }
         #accountEmail {
-            font-size: 24px;
+            font-size: 20px;
             margin: 10px;
             color: #61A848; /* Subway Green Text */
         }
         #accountPoints {
-            font-size: 18px;
+            font-size: 16px;
             color: #28652B; /* Darker Green Text */
         }
         #qrcode {
-            max-width: 200px;
+            max-width: 100%;
+            height: auto;
             margin: 20px;
         }
         .button {
+            font-size: 16px;
             background-color: #FF0000; /* Red Button for "Press after use" */
             color: #FFFFFF; /* White Text on Red Button */
             border: none;
@@ -50,13 +57,12 @@
             color: #FFFFFF; /* White Text on Green Button */
         }
         #footer {
+            font-size: 14px;
             background-color: #FFFFFF; /* Subway Green Background for footer */
             padding: 10px;
             border-radius: 20px;
-            font-size: 14px;
             margin: 0 auto;
-
-            color: black; /* White Text */
+            color: black; /* Black Text */
         }
         a {
             color: #FF0000; /* Red Text for the Buy Me a Coffee link */
@@ -72,17 +78,16 @@
             <div id="accountPoints">Points: Loading...</div>
             <img id="qrcode" src="" alt="QR Code">
         </div>
-        <button id="refreshButton" class="button refresh">Didn't work?</button>
+        <button id="refreshButton" class="button refresh">Refresh</button>
         <button id="deleteButton" class="button">Press after use</button>
         <div id="footer">
-            Saved a couple bucks? </br>
+            Saved a couple bucks? <br>
             <a href="https://www.buymeacoffee.com/adityaj" target="_blank" style="color: #FF6138; font-family: 'Comic Sans MS', cursive; font-size: 18px; text-decoration: none;">☕ Buy me a coffee ☕</a>
         </div>
     </div>
-    
 
     <script>
-        var ip = "http://132.226.131.86:3000";
+        var ip = "https://api.codetabs.com/v1/proxy/?quest=http://132.226.131.86:3000";
 
         // Function to fetch and display a random account
         function fetchRandomAccount() {

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, make_response
 import requests
 import censusname
 import time
@@ -6,18 +6,72 @@ import re
 import random
 import json
 from flask_cors import CORS
+from flask_apscheduler import APScheduler
 
 app = Flask(__name__)
+app.secret_key = '1234821ejo9iuhA&$$3unawiuqn23knj'
 CORS(app)
+
+scheduler = APScheduler()
 
 past_accounts = []
 
-@app.route('/')
-def index():
-    try:
-        return render_template('index.html')
-    except Exception as e:
-        return jsonify({'error': str(e)})
+visitors = []
+
+interval = 60*60
+
+threshold = 100
+overflow = 10
+
+
+# Path to your SSL certificate and key files
+cert_file = './cert.pem'
+key_file = './privkey.pem'
+
+
+# write formatting but colored in orange and everything after it white
+def orange(text):
+    return ("\033[93m {}\033[00m" .format(text))
+
+# write formatting but colored in green and everything after it white
+def green(text):
+    return ("\033[92m {}\033[00m" .format(text))
+
+from datetime import datetime
+
+def getCurrentTime():
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    return current_time 
+print("Current Time =", getCurrentTime())
+
+def info_formatting():
+    return orange("(" + getCurrentTime() +")" + " | INFO | ")
+
+def checkAccountInventory():
+
+    print(info_formatting() + "Running scheduled task to check account inventory")
+
+    # Assuming the JSON file is in the same directory as your script
+    json_file_path = './accounts.json'
+
+    # Load JSON data
+    with open(json_file_path, 'r') as file:
+        data = json.load(file)
+
+    print(info_formatting() + "Accounts in inventory: " + str(len(data)))
+
+    if len(data) < threshold:
+        generate_accounts((threshold+overflow) - len(data))
+
+
+
+# @app.route('/')
+# def index():
+#     try:
+#         return render_template('index.html')
+#     except Exception as e:
+#         return jsonify({'error': str(e)})
 
 from functools import wraps
 
@@ -33,17 +87,20 @@ def requires_auth(f):
         auth = request.authorization
         if not auth or not check_auth(auth.username, auth.password):
             return ('Unauthorized', 401, {'WWW-Authenticate': 'Basic realm="Login Required"'})
+        else:
+            return render_template('admin.html')
         return f(*args, **kwargs)
     return decorated
 
-def check_auth(username, password):
+def check_auth(username, password): 
     return username in authorized_users and password == authorized_users[username]
 
 @app.route('/admin')
 @requires_auth
 def admin():
     try:
-        return render_template('admin.html')
+        # return render_template('admin.html')
+        print(info_formatting() + "Admin authenticated")
     except Exception as e:
         return jsonify({'error': str(e)})
 
@@ -69,6 +126,9 @@ def get_random_account():
         # Assuming the JSON file is in the same directory as your script
         json_file_path = './accounts.json'
 
+        visitors.append("1")
+        print(info_formatting()+ "Visitors: " + str(len(visitors)))
+
         # Load JSON data
         with open(json_file_path, 'r') as file:
             data = json.load(file)
@@ -81,15 +141,12 @@ def get_random_account():
             return get_random_account()
         else:
             past_accounts.append(account)
-            if len(past_accounts) > 5:
+            if len(past_accounts) > 10:
                 past_accounts.pop(0)
-            return jsonify(account)    
-
+            
+            return jsonify(account)     
     except Exception as e:
         return jsonify({'error': str(e)})
-
-
-
 
 @app.route('/delete-account', methods=['GET', 'POST'])
 def delete_accounts():
@@ -123,11 +180,14 @@ def delete_accounts():
         return jsonify({'error': str(e)})
 
 @app.route('/generate-accounts', methods=['POST'])
-def generate_accounts():
+def generate_accounts(requestedEmails=0):
     accounts = []
 
-    NumberofEmails = request.args.get('numberofemails')
-    print( "Received request to generate emails: " + str(NumberofEmails))
+    try:
+        NumberofEmails = request.args.get('numberofemails')
+        print(info_formatting() +  "Received request to generate emails: " + str(NumberofEmails))
+    except Exception as e:
+        NumberofEmails = requestedEmails
 
     # Get random emails
     # NumberofEmails = 3
@@ -147,7 +207,7 @@ def generate_accounts():
         i += 1
         genCounter += 1
 
-        formatting = " | " + str(i) + "/" + str(NumberofEmails) + " | "
+        formatting = green(" | " + str(i) + "/" + str(NumberofEmails) + " | ")
 
         url = 'https://rewards.subway.co.uk/tx-sub/registration'
         headers = {
@@ -160,6 +220,7 @@ def generate_accounts():
             "Host": "rewards.subway.co.uk",
             "moduleCode": "SUB_STORMBORN",
             "User-Agent": "okhttp/4.9.0"
+
         }
 
         firstname = censusname.generate(nameformat='{given}', given='male')
@@ -327,6 +388,7 @@ def generate_accounts():
             "Host": "promocode.tranxactor.com",
             "User-Agent": "okhttp/4.9.0"
         }
+        
 
         response = requests.get(url, headers=headers)
 
@@ -353,7 +415,17 @@ def generate_accounts():
     
     return jsonify({"message": "Accounts generated and written to file", "accounts": accounts})
 
+
 if __name__ == '__main__':
     from waitress import serve
+
+    
+    scheduler.add_job(id='Scheduled Task', func=checkAccountInventory, trigger="interval", seconds=interval)
+    print(info_formatting() + "Starting scheduler at frequency: " + str(interval))
+    scheduler.start()
+
+    context = (cert_file, key_file)
+    serve(app, host="0.0.0.0", port=3000, url_scheme='https')
+
     serve(app, host="0.0.0.0", port=3000)
     # app.run(debug=True, host='0.0.0.0', port=3000)
