@@ -18,7 +18,8 @@ past_accounts = []
 
 visitors = []
 
-interval = 60*60
+# interval = 60*60
+interval = 3
 
 threshold = 100
 overflow = 10
@@ -61,10 +62,66 @@ def checkAccountInventory():
 
     print(info_formatting() + "Accounts in inventory: " + str(len(data)))
 
+    accounts_to_generate = (threshold+overflow) - len(data)
+
     if len(data) < threshold:
-        generate_accounts((threshold+overflow) - len(data))
+        generate_accounts(accounts_to_generate)
+
+    print(info_formatting() + "Running Scheduled task to check verified account cache")
+
+    # Assuming the JSON file is in the same directory as your script
+
+    verified_json_file_path = './verified.json'
+
+    # Load JSON data
+    with open(verified_json_file_path, 'r') as file:
+        data = json.load(file)
+    
+    accounts_to_cache = (threshold+overflow) - len(data)
+
+    print(info_formatting() + "Accounts in cache: " + str(len(data)))
+
+    if len(data) < threshold:
+        verify_accounts(accounts_to_cache)
+
+def getPointBalance()
+
+def verify_accounts(NumOfAccountsToCache):
+    print(info_formatting() + "Received request to cache accounts: " + str(NumOfAccountsToCache))
+
+    # Assuming the JSON file is in the same directory as your script
+    json_file_path = './accounts.json'
+
+    # Load accounts data which is in accounts.json file but is in a list of json objects
+    with open(json_file_path, 'r') as file:
+        data = json.load(file)
+
+    # get the first NumOfAccountsToCache accounts from the accounts.json file
+    accounts_to_cache = data[:NumOfAccountsToCache]
+
+    # Assuming the JSON file is in the same directory as your script
+    verified_json_file_path = './verified.json'
+
+    # Load accounts data which is in accounts.json file but is in a list of json objects
+    with open(verified_json_file_path, 'r') as file:
+        verified_data = json.load(file)
+
+    for account in accounts_to_cache:
 
 
+    verified_data.extend(accounts_to_cache)
+
+    with open(verified_json_file_path, "w") as f:
+        # save as a json object instead of a list of json objects
+        json.dump(verified_data, f)
+
+    with open(json_file_path, "w") as f:
+        # save as a json object instead of a list of json objects
+        json.dump(data[NumOfAccountsToCache:], f)
+
+    print(info_formatting() + "Accounts cached to file: " + verified_json_file_path)
+
+    return jsonify({"message": "Accounts cached and written to file", "accounts": accounts_to_cache})
 
 # @app.route('/')
 # def index():

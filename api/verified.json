@@ -1,0 +1,20 @@
+[{
+    "email": "3ld2ofzj7w8@ezztt.com",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk4MDc2MDIwLCJ0cmFkZXJJZCI6IjE3NDc0MjU1NyIsInVzZXJOYW1lIjoiM2xkMm9memo3dzhAZXp6dHQuY29tIiwiaWF0IjoxNjk4MDcyNDIwLCJ1c2VySWQiOiIxNzQ3NDI1NTciLCJwcm9ncmFtSWQiOiI2In0.oh9RDtdCqhqU8nMqOR6ECjG1AKGIR07i3S9o_Gx9cMI",
+    "masterToken": "YmVlMzViZWI0OTI5NDdhYjk2Zjg4MmFiNzJhYzkyNjE=",
+    "loyaltyId": "6338450258099735",
+    "qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450258099735",
+    "points": 250,
+    "squadCode": "b1iufn",
+    "referralCode": "X-63632KO"
+  },
+  {
+    "email": "vnlvk4dno1@txcct.com",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk4MDc2MDcwLCJ0cmFkZXJJZCI6IjE3NDc0MjU2MyIsInVzZXJOYW1lIjoidm5sdms0ZG5vMUB0eGNjdC5jb20iLCJpYXQiOjE2OTgwNzI0NzAsInVzZXJJZCI6IjE3NDc0MjU2MyIsInByb2dyYW1JZCI6IjYifQ.-lynnCy5tTMuVx0urWIXGUx5jW527kOIvG_hUN6iXp0",
+    "masterToken": "NzRmMDA1YWRmNmJmNDc1NTlkMzYwY2VkN2U3ZTAzYmU=",
+    "loyaltyId": "6338450247206714",
+    "qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450247206714",
+    "points": 250,
+    "squadCode": "b1iufn",
+    "referralCode": "X-63632KO"
+  }]
