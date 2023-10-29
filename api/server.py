@@ -24,6 +24,9 @@ interval = 3
 threshold = 100
 overflow = 10
 
+cache_threshold = 10
+cache_overflow = 1
+
 
 # Path to your SSL certificate and key files
 cert_file = './cert.pem'
@@ -77,14 +80,153 @@ def checkAccountInventory():
     with open(verified_json_file_path, 'r') as file:
         data = json.load(file)
     
-    accounts_to_cache = (threshold+overflow) - len(data)
+    accounts_to_cache = (cache_threshold+cache_overflow) - len(data)
 
     print(info_formatting() + "Accounts in cache: " + str(len(data)))
 
     if len(data) < threshold:
         verify_accounts(accounts_to_cache)
 
-def getPointBalance()
+def updatePointBalances(accountsData):
+        
+    for i in range(len(accountsData)):
+
+        token = accountsData[i].get("token")
+        email = accountsData[i].get("email")
+        masterToken = accountsData[i].get("masterToken")
+        squadCode = accountsData[i].get("squadCode")
+        referralCode = accountsData[i].get("referralCode")
+
+        url = 'https://rewards.subway.co.uk/tx-auth/auth/logon'
+        headers = {
+            'Accept-Encoding': 'gzip',
+            'appVersion': '1.8.3',
+            'Connection': 'Keep-Alive',
+            'Content-Length': '52',
+            'Content-Type': 'application/json; charset=UTF-8',
+            'deviceId': '00000000-5e1f-f5f9-ffff-ffffef05ac4a',
+            'Host': 'rewards.subway.co.uk',
+            'latitude': '0',
+            'longitude': '0',
+            'moduleCode': 'SUB_STORMBORN',
+            'platform': 'Android',
+            'User-Agent': 'okhttp/4.9.0'
+        }
+
+        myobj = {
+            "username": email,
+            "password": "Password123!",
+        }
+
+        x = requests.post(url, json=myobj, headers=headers)
+
+        print("Attempting token refresh: " + str(x.text))
+
+        if int(x.json().get("outcomeCode")) == -6:
+            next()
+
+
+        # verify email code
+
+        ## Get verification code
+
+        username = email.split("@")[0]
+        domain = email.split("@")[1]
+
+        url = 'https://www.1secmail.com/api/v1/?action=getMessages&login=' + username + '&domain=' + domain
+
+        time.sleep(5)
+
+        while True:
+            response = requests.get(url)
+
+            data = response.json()
+
+            try:
+                emailid = data[0].get("id")
+                break
+            except:
+                print("No verification code found yet, retrying...")
+                time.sleep(5)
+                continue
+
+        url = 'https://www.1secmail.com/api/v1/?action=readMessage&login=' + username + '&domain=' + domain + '&id=' + str(emailid)
+
+        response = requests.get(url)
+
+        # Extract the code using a regular expression
+        try:
+            match = re.search(r'Your code: ([A-Z0-9]{6})', response.text)
+        except:
+            print("No verification code found yet, retrying...")
+        
+        if match == None:
+            match = re.search(r'YOUR CODE ([A-Z0-9]{6})', response.text)
+            
+
+        print("Verification code: " + str(match))
+
+        if match:
+            code = str(match.group(0)).split(" ")[2]
+            if code:
+                print("Acquired verification code: "+ str(code))
+        else:
+            next()
+
+        ##
+
+
+        url = 'https://rewards.subway.co.uk/tx-sub/registration/verification/' + str(code)
+        headers = {
+        'accept': 'application/json',
+        'Accept-Encoding': 'gzip',
+        'Connection': 'Keep-Alive',
+        'Content-Length': '0',
+        'Host': 'rewards.subway.co.uk',
+        'moduleCode': 'SUB_STORMBORN',
+        'User-Agent': 'okhttp/4.9.0'
+        }
+
+        print("Attempting Email Verification: " + str(url))
+
+        response = requests.put(url, headers=headers)
+
+        print("Attempting Email Verification: " + str(response.json().get("outComeMessage")))
+
+        token = response.json().get("login").get("token")
+
+        print("Acquired new token: " + str(token))
+
+        url = 'https://rewards.subway.co.uk/tx-sub/members'
+        headers = {
+            "Accept-Encoding": "gzip",
+            "Authorization": token,
+            "Connection": "Keep-Alive",
+            "Host": "rewards.subway.co.uk",
+            "User-Agent": "okhttp/4.9.0"
+        }
+
+        response = requests.get(url, headers=headers)
+
+        if response.status_code == 200:
+            data = response.json()
+
+            loyalty_balance = str(data.get("loyaltyBalance"))
+            email = data.get("email")
+            first_name = data.get("firstName")
+            last_name = data.get("lastName")
+
+            # print(response.text.email + " " + response.text.firstName + " " + response.text.lastName + " " + response.text.loyaltyBalance)
+            print(loyalty_balance + " | " + email + " | " + first_name + " | " + last_name) 
+
+            if float(loyalty_balance) >= 250:
+                accountsData[i]["points"] = loyalty_balance
+            else:
+                accountsData.pop(i)
+        else:
+            print(f"Request failed with status code: {response.text}")
+    
+    return accountsData
 
 def verify_accounts(NumOfAccountsToCache):
     print(info_formatting() + "Received request to cache accounts: " + str(NumOfAccountsToCache))
@@ -106,8 +248,8 @@ def verify_accounts(NumOfAccountsToCache):
     with open(verified_json_file_path, 'r') as file:
         verified_data = json.load(file)
 
-    for account in accounts_to_cache:
 
+    updatePointBalances(accounts_to_cache)
 
     verified_data.extend(accounts_to_cache)
 
