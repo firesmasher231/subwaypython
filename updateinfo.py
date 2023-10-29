@@ -49,7 +49,7 @@ myobj = {
 
 x = requests.post(url, json=myobj, headers=headers)
 
-print("Attempting Account Registration: " + str(x.text))
+print("Attempting token refresh: " + str(x.text))
 
 import re
 
@@ -84,7 +84,7 @@ if 1:
     response = requests.get(url)
 
     # Extract the code using a regular expression
-    match = re.search(r'Your code: ([A-Z0-9]{5})', response.text)
+    match = re.search(r'Your code: ([A-Z0-9]{6})', response.text)
 
     
     code = str(match.group(0)).split(" ")[2]

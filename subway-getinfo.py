@@ -4,7 +4,7 @@ import json
 url = 'https://rewards.subway.co.uk/tx-sub/members'
 headers = {
     "Accept-Encoding": "gzip",
-    "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjkyOTU4MTYwLCJ0cmFkZXJJZCI6IjE3NDMxNDk2NiIsInVzZXJOYW1lIjoiZ2VuZ2FuYTk5QGdtYWlsLmNvbSIsIm1hc3RlclRva2VuIjoiWW1GbU16ZGhNMlV5TXpCaE5EVXlOV0psWWpaaE5qUTNaalUxTnpRek1UVT0iLCJpYXQiOjE2OTI5NTQ1NjAsInVzZXJJZCI6IjE3NDMxNDk2NiJ9.6LhNn1CYq8HeMmYZDkVnZyfQmMp14cbO-_QQDPNP4ew",
+    "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk4NTExNTk4LCJ0cmFkZXJJZCI6IjE3NDczNTUzNSIsInVzZXJOYW1lIjoibDUwaHF4NGlocXo5QHR4Y2N0LmNvbSIsImlhdCI6MTY5ODUwNzk5OCwidXNlcklkIjoiMTc0NzM1NTM1IiwicHJvZ3JhbUlkIjoiNiJ9.MBMgQwm7_C_ZyrDIgDjUa7itXm3iKeiVcWfk463aRic",
     "Connection": "Keep-Alive",
     "Host": "rewards.subway.co.uk",
     "User-Agent": "okhttp/4.9.0"
