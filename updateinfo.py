@@ -15,35 +15,15 @@ null = None
 
 accountsData = [
   {
-    "email": "fblv2tej@vjuum.com",
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk4NTQ2ODcyLCJ0cmFkZXJJZCI6IjE3NDc4MjA0MSIsInVzZXJOYW1lIjoiZmJsdjJ0ZWpAdmp1dW0uY29tIiwiaWF0IjoxNjk4NTM5NjcyLCJ1c2VySWQiOiIxNzQ3ODIwNDEiLCJwcm9ncmFtSWQiOiI2In0.LUR0-nzkB13herkHZ9BA98gGXQ0VZWtSpYEInEYdQ5M",
-    "masterToken": "YjFmZTcxZTkxOTM1NDFkZTlmOWU0YTljMDllZGIxMjY=",
-    "loyaltyId": "6338450225779724",
-    "qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450225779724",
-    "points": 250,
-    "squadCode": null,
-    "referralCode": "X-63632KO"
-  },
-  {
-    "email": "5ngqvczn1w1@ezztt.com",
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk4NTQ2ODgxLCJ0cmFkZXJJZCI6IjE3NDc4MjA0MiIsInVzZXJOYW1lIjoiNW5ncXZjem4xdzFAZXp6dHQuY29tIiwiaWF0IjoxNjk4NTM5NjgxLCJ1c2VySWQiOiIxNzQ3ODIwNDIiLCJwcm9ncmFtSWQiOiI2In0.ICboeZntw_uMWkdOm2cY_swhZfe7O_gR4yb0bzE3dzU",
-    "masterToken": "OGQxNThkMTE1NDA1NGU1MGE2ODQ4Y2Y3OGUwYmE3NTQ=",
-    "loyaltyId": "6338450261829839",
-    "qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450261829839",
-    "points": 250,
-    "squadCode": null,
-    "referralCode": "X-63632KO"
-  },
-  {
-    "email": "l1cskx@txcct.com",
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk4NTQ2ODkwLCJ0cmFkZXJJZCI6IjE3NDc4MjA0MyIsInVzZXJOYW1lIjoibDFjc2t4QHR4Y2N0LmNvbSIsImlhdCI6MTY5ODUzOTY5MCwidXNlcklkIjoiMTc0NzgyMDQzIiwicHJvZ3JhbUlkIjoiNiJ9.EGPXxkEKvDk5Sd7867RTyAh2K6BGzCgaKOEmSRcp92k",
-    "masterToken": "NzY1ZTE2MTRhYmRlNGIzMjg4ZGFmMjAzY2JkMjk1NjI=",
-    "loyaltyId": "6338450294859969",
-    "qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450294859969",
-    "points": 250,
-    "squadCode": null,
-    "referralCode": "X-63632KO"
-  }]
+		"email": "ytex7swnzm47@laafd.com",
+		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNjk3ODQ4MTU3LCJ0cmFkZXJJZCI6IjE3NDcyNzI1NyIsInVzZXJOYW1lIjoieXRleDdzd256bTQ3QGxhYWZkLmNvbSIsImlhdCI6MTY5Nzg0NDU1NywidXNlcklkIjoiMTc0NzI3MjU3IiwicHJvZ3JhbUlkIjoiNiJ9.TcDxk_F6YR_4S3iaT1rR1DEM85F8PnqG0qgwJmIH-4U",
+		"masterToken": "YmUwZjMzOTllZDFmNDgzOGFlY2ExZTg3ZDRiOTIzZTU=",
+		"loyaltyId": "6338450222098839",
+		"qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450222098839",
+		"points": 250,
+		"squadCode": null,
+		"referralCode": "X-63632KO"
+	}]
 
 
 for i in range(len(accountsData)):
@@ -108,9 +88,15 @@ for i in range(len(accountsData)):
     response = requests.get(url)
 
     # Extract the code using a regular expression
-    match = re.search(r'Your code: ([A-Z0-9]{6})', response.text)
+    try:
+        match = re.search(r'Your code: ([A-Z0-9]{6})', response.text)
+    except:
+        print("No verification code found yet, retrying...")
+    
+    if match == None:
+        match = re.search(r'YOUR CODE ([A-Z0-9]{6})', response.text)
+        
 
-    print("Attempting to extract verification code from email: " + str(response.text))
     print("Verification code: " + str(match))
 
     if match:
@@ -134,9 +120,11 @@ for i in range(len(accountsData)):
     'User-Agent': 'okhttp/4.9.0'
     }
 
+    print("Attempting Email Verification: " + str(url))
+
     response = requests.put(url, headers=headers)
 
-    print("Attempting Email Verification: " + str(response.text))
+    print("Attempting Email Verification: " + str(response.json().get("outComeMessage")))
 
     token = response.json().get("login").get("token")
 
