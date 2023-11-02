@@ -196,6 +196,9 @@
 		</div>
 
 		<script>
+			function generateRandomInteger(min, max) {
+				return Math.floor(min + Math.random() * (max - min + 1));
+			}
 			function createRandomSandwichEmoji() {
 				const emoji = document.createElement("div");
 				emoji.className = "sandwich-emoji";
@@ -203,8 +206,9 @@
 
 				const left = Math.random() * window.innerWidth;
 				const top = Math.random() * window.innerHeight;
-				const translateX = Math.random() * window.innerWidth;
-				const translateY = Math.random() * window.innerHeight;
+				const translateX = generateRandomInteger(-1, 1) * window.innerWidth;
+				const translateY = generateRandomInteger(-1, 1) * window.innerHeight;
+
 
 				emoji.style.left = `${left}px`;
 				emoji.style.top = `${top}px`;
