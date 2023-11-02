@@ -1,131 +1,236 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SubSavers 🥪</title>
-    <style>
-        h1 {
-            font-size: 28px;
-            color: black;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #61A848; /* Subway Green Background */
-            color: #FFFFFF; /* White Text */
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>SubSavers 🥪</title>
+		<style>
+			h1 {
+				font-size: 28px;
+				color: black;
+			}
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				background-color: #61a848; /* Subway Green Background */
+				color: #ffffff; /* White Text */
 
-            padding: 2rem;
-        }
-        #container {
-            background-color: #FFFFFF; /* White Container */
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            margin: 0 auto;
-            /* width: 100%; Set the container to full width */
-            max-width: 400px;
-        }
-        #accountInfo {
-            margin: 20px;
-        }
-        #accountEmail {
-            font-size: 20px;
-            margin: 10px;
-            color: #61A848; /* Subway Green Text */
-        }
-        #accountPoints {
-            font-size: 16px;
-            color: #28652B; /* Darker Green Text */
-        }
-        #qrcode {
-            max-width: 100%;
-            height: auto;
-            margin: 20px;
-        }
-        .button {
-            font-size: 16px;
-            background-color: #FF0000; /* Red Button for "Press after use" */
-            color: #FFFFFF; /* White Text on Red Button */
-            border: none;
-            border-radius: 10px;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        .button.refresh {
-            background-color: #61A848; /* Subway Green Button for "Refresh" */
-            color: #FFFFFF; /* White Text on Green Button */
-        }
-        #footer {
-            font-size: 14px;
-            background-color: #FFFFFF; /* Subway Green Background for footer */
-            padding: 10px;
-            border-radius: 20px;
-            margin: 0 auto;
-            color: black; /* Black Text */
-        }
-        a {
-            color: #FF0000; /* Red Text for the Buy Me a Coffee link */
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <div id="container">
-        <h1><span style="font-size: 34px; color: #61A848;">Sub</span>Savers 🥪</h1>
-        <div id="accountInfo">
-            <div id="accountEmail">Email: Loading...</div>
-            <div id="accountPoints">Points: Loading...</div>
-            <img id="qrcode" src="" alt="QR Code">
-        </div>
-        <button id="refreshButton" class="button refresh">Refresh</button>
-        <button id="deleteButton" class="button">Press after use</button>
-        <div id="footer">
-            Saved a couple bucks? <br>
-            <a href="https://www.buymeacoffee.com/adityaj" target="_blank" style="color: #FF6138; font-family: 'Comic Sans MS', cursive; font-size: 18px; text-decoration: none;">☕ Buy me a coffee ☕</a>
-        </div>
-    </div>
+				padding: 2rem;
+			}
+			#container {
+				background-color: #ffffff; /* White Container */
+				border-radius: 15px;
+				padding: 20px;
+				text-align: center;
+				margin: 0 auto;
+				/* width: 100%; Set the container to full width */
+				max-width: 400px;
+			}
+			#accountInfo {
+				margin: 20px;
+			}
+			#accountEmail {
+				font-size: 20px;
+				margin: 10px;
+				color: #61a848; /* Subway Green Text */
+			}
+			#accountPoints {
+				font-size: 16px;
+				color: #28652b; /* Darker Green Text */
+			}
+			#qrcode {
+				max-width: 100%;
+				height: auto;
+				margin: 20px;
+			}
+			.button {
+				font-size: 16px;
+				background-color: #ff0000; /* Red Button for "Press after use" */
+				color: #ffffff; /* White Text on Red Button */
+				border: none;
+				border-radius: 10px;
+				padding: 10px 20px;
+				margin: 10px;
+				cursor: pointer;
+			}
+			.button.refresh {
+				background-color: #61a848; /* Subway Green Button for "Refresh" */
+				color: #ffffff; /* White Text on Green Button */
+			}
+			#footer {
+				font-size: 14px;
+				background-color: #ffffff; /* Subway Green Background for footer */
+				padding: 10px;
+				border-radius: 20px;
+				margin: 0 auto;
+				color: black; /* Black Text */
+			}
+			a {
+				color: #ff0000; /* Red Text for the Buy Me a Coffee link */
+				text-decoration: none;
+			}
+			.collapsible-container {
+				margin-bottom: 1rem;
+			}
+			.collapsible {
+				background-color: #61a848;
+				color: #e5ffde;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 20px;
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
 
-    <script>
-        var ip = "https://api.codetabs.com/v1/proxy/?quest=http://132.226.131.86:3000";
+			.collapsible .toggle-icon {
+				margin-right: 20px;
+			}
 
-        // Function to fetch and display a random account
-        function fetchRandomAccount() {
-            fetch(ip + "/get-random-account")
-                .then((response) => response.json())
-                .then((account) => {
-                    document.getElementById("accountEmail").textContent = "Email: " + account.email;
-                    document.getElementById("accountPoints").textContent = "Points: " + account.points;
-                    // Set the QR code image source
-                    document.getElementById("qrcode").src = account.qrcode;
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
-        }
+			.content {
+				display: block;
+				padding: 10px;
+				background-color: #e5ffde; /* Light green background */
+				color: #61a848; /* Green text */
+				border-bottom-left-radius: 15px;
+				border-bottom-right-radius: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1><span style="font-size: 34px; color: #61a848">Sub</span>Savers 🥪</h1>
+			<div id="accountInfo">
+				<div id="accountEmail">Email: Loading...</div>
+				<div id="accountPoints">Points: Loading...</div>
+				<img id="qrcode" src="" alt="QR Code" />
+			</div>
+			<button id="refreshButton" class="button refresh">Refresh</button>
+			<button id="deleteButton" class="button">Press after use</button>
+			<!-- Collapsible Section -->
+			<div class="collapsible-container">
+				<button class="collapsible">
+					How do I use this?
+					<span class="toggle-icon">-</span>
+				</button>
+				<div class="content">
+					<ol>
+						<li>Walk into a Subway.</li>
+						<li>
+							Order a compatible side or hot drink from the
+							<a
+								href="https://www.subway.com/en-IE/MenuNutrition/Menu/The-Real-Deal-Sides"
+								style="color: #61a848; text-decoration: underline"
+								>full sides list</a
+							>.
+						</li>
+						<li>
+							Ask if you can use your Subway points to pay at the counter.
+						</li>
+						<li>Allow the staff to scan the QR code on your screen.</li>
+						<li>Enjoy your free meal!</li>
+					</ol>
+				</div>
+			</div>
+			<!-- End Collapsible Section -->
 
-        // Initial fetch of a random account
-        fetchRandomAccount();
+			<div id="footer">
+				Saved a couple bucks? <br />
+				<a
+					href="https://www.buymeacoffee.com/adityaj"
+					target="_blank"
+					style="
+						color: #ff6138;
+						font-family: 'Comic Sans MS', cursive;
+						font-size: 18px;
+						text-decoration: none;
+					"
+					>☕ Buy me a coffee ☕</a
+				>
+			</div>
+		</div>
 
-        // Refresh Button
-        document.getElementById("refreshButton").addEventListener("click", function () {
-            fetchRandomAccount();
-        });
+		<script>
+			// JavaScript for toggling the collapsible section
+			var coll = document.querySelector(".collapsible");
+			var content = coll.nextElementSibling;
+			var isCollapsed = false;
+			var icon = document.querySelector(".toggle-icon");
 
-        // "Press after use" Button
-        document.getElementById("deleteButton").addEventListener("click", function () {
-            fetch(ip + "/delete-account?email=" + document.getElementById("accountEmail").textContent.split(":")[1].trim(), {
-                method: "POST",
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    // After deleting the account, fetch and display a new random account
-                    fetchRandomAccount();
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
-        });
-    </script>
-</body>
+			coll.addEventListener("click", function () {
+				if (isCollapsed) {
+					content.style.display = "block";
+					icon.innerHTML = "-"; // Show "-" when expanded
+
+					isCollapsed = false;
+				} else {
+					content.style.display = "none";
+					icon.innerHTML = "+"; // Show "+" when collapsed
+
+					isCollapsed = true;
+				}
+			});
+
+			var ip =
+				"https://api.codetabs.com/v1/proxy/?quest=http://132.226.131.86:3000";
+
+			// Function to fetch and display a random account
+			function fetchRandomAccount() {
+				fetch(ip + "/get-random-account")
+					.then((response) => response.json())
+					.then((account) => {
+						document.getElementById("accountEmail").textContent =
+							"Email: " + account.email;
+						document.getElementById("accountPoints").textContent =
+							"Points: " + account.points;
+						// Set the QR code image source
+						document.getElementById("qrcode").src = account.qrcode;
+					})
+					.catch((error) => {
+						console.error("Error:", error);
+					});
+			}
+
+			// Initial fetch of a random account
+			fetchRandomAccount();
+
+			// Refresh Button
+			document
+				.getElementById("refreshButton")
+				.addEventListener("click", function () {
+					fetchRandomAccount();
+				});
+
+			// "Press after use" Button
+			document
+				.getElementById("deleteButton")
+				.addEventListener("click", function () {
+					fetch(
+						ip +
+							"/delete-account?email=" +
+							document
+								.getElementById("accountEmail")
+								.textContent.split(":")[1]
+								.trim(),
+						{
+							method: "POST",
+						}
+					)
+						.then((response) => response.json())
+						.then((data) => {
+							// After deleting the account, fetch and display a new random account
+							fetchRandomAccount();
+						})
+						.catch((error) => {
+							console.error("Error:", error);
+						});
+				});
+		</script>
+	</body>
 </html>
