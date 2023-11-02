@@ -18,14 +18,13 @@ past_accounts = []
 
 visitors = []
 
-# interval = 60*60
-interval = 3
+interval = 60*15
 
-threshold = 100
-overflow = 10
+threshold = 200
+overflow = 25
 
 cache_threshold = 10
-cache_overflow = 1
+cache_overflow = 10
 
 
 # Path to your SSL certificate and key files
@@ -84,12 +83,12 @@ def checkAccountInventory():
 
     print(info_formatting() + "Accounts in cache: " + str(len(data)))
 
-    if len(data) < threshold:
+    if len(data) < cache_threshold:
         verify_accounts(accounts_to_cache)
 
 def updatePointBalances(accountsData):
         
-    for i in range(len(accountsData)):
+    for i in range(len(accountsData)-2):
 
         token = accountsData[i].get("token")
         email = accountsData[i].get("email")
@@ -120,111 +119,110 @@ def updatePointBalances(accountsData):
 
         x = requests.post(url, json=myobj, headers=headers)
 
-        print("Attempting token refresh: " + str(x.text))
+        print(info_formatting() + "Attempting token refresh: " + str(x.text))
 
         if int(x.json().get("outcomeCode")) == -6:
-            next()
+            accountsData.pop(i)
+        else:
+            # verify email code
 
+            ## Get verification code
 
-        # verify email code
+            username = email.split("@")[0]
+            domain = email.split("@")[1]
 
-        ## Get verification code
+            url = 'https://www.1secmail.com/api/v1/?action=getMessages&login=' + username + '&domain=' + domain
 
-        username = email.split("@")[0]
-        domain = email.split("@")[1]
+            time.sleep(5)
 
-        url = 'https://www.1secmail.com/api/v1/?action=getMessages&login=' + username + '&domain=' + domain
+            while True:
+                response = requests.get(url)
 
-        time.sleep(5)
+                data = response.json()
 
-        while True:
+                try:
+                    emailid = data[0].get("id")
+                    break
+                except:
+                    print(info_formatting() + "No verification code found yet, retrying...")
+                    time.sleep(5)
+                    continue
+
+            url = 'https://www.1secmail.com/api/v1/?action=readMessage&login=' + username + '&domain=' + domain + '&id=' + str(emailid)
+
             response = requests.get(url)
 
-            data = response.json()
-
+            # Extract the code using a regular expression
             try:
-                emailid = data[0].get("id")
-                break
+                match = re.search(r'Your code: ([A-Z0-9]{6})', response.text)
             except:
-                print("No verification code found yet, retrying...")
-                time.sleep(5)
+                print(info_formatting() + "No verification code found yet, retrying...")
+            
+            if match == None:
+                match = re.search(r'YOUR CODE ([A-Z0-9]{6})', response.text)
+                
+
+            print(info_formatting() + "Verification code: " + str(match))
+
+            if match:
+                code = str(match.group(0)).split(" ")[2]
+                if code:
+                    print(info_formatting() + "Acquired verification code: "+ str(code))
+            else:
                 continue
 
-        url = 'https://www.1secmail.com/api/v1/?action=readMessage&login=' + username + '&domain=' + domain + '&id=' + str(emailid)
-
-        response = requests.get(url)
-
-        # Extract the code using a regular expression
-        try:
-            match = re.search(r'Your code: ([A-Z0-9]{6})', response.text)
-        except:
-            print("No verification code found yet, retrying...")
-        
-        if match == None:
-            match = re.search(r'YOUR CODE ([A-Z0-9]{6})', response.text)
-            
-
-        print("Verification code: " + str(match))
-
-        if match:
-            code = str(match.group(0)).split(" ")[2]
-            if code:
-                print("Acquired verification code: "+ str(code))
-        else:
-            next()
-
-        ##
+            ##
 
 
-        url = 'https://rewards.subway.co.uk/tx-sub/registration/verification/' + str(code)
-        headers = {
-        'accept': 'application/json',
-        'Accept-Encoding': 'gzip',
-        'Connection': 'Keep-Alive',
-        'Content-Length': '0',
-        'Host': 'rewards.subway.co.uk',
-        'moduleCode': 'SUB_STORMBORN',
-        'User-Agent': 'okhttp/4.9.0'
-        }
+            url = 'https://rewards.subway.co.uk/tx-sub/registration/verification/' + str(code)
+            headers = {
+            'accept': 'application/json',
+            'Accept-Encoding': 'gzip',
+            'Connection': 'Keep-Alive',
+            'Content-Length': '0',
+            'Host': 'rewards.subway.co.uk',
+            'moduleCode': 'SUB_STORMBORN',
+            'User-Agent': 'okhttp/4.9.0'
+            }
 
-        print("Attempting Email Verification: " + str(url))
+            print(info_formatting() + "Attempting Email Verification: " + str(url))
 
-        response = requests.put(url, headers=headers)
+            response = requests.put(url, headers=headers)
 
-        print("Attempting Email Verification: " + str(response.json().get("outComeMessage")))
+            print(info_formatting() + "Attempting Email Verification: " + str(response.json().get("outComeMessage")))
 
-        token = response.json().get("login").get("token")
+            token = response.json().get("login").get("token")
 
-        print("Acquired new token: " + str(token))
+            print(info_formatting() + "Acquired new token: " + str(token[:3]) + "..." + str(token[-5:]))
 
-        url = 'https://rewards.subway.co.uk/tx-sub/members'
-        headers = {
-            "Accept-Encoding": "gzip",
-            "Authorization": token,
-            "Connection": "Keep-Alive",
-            "Host": "rewards.subway.co.uk",
-            "User-Agent": "okhttp/4.9.0"
-        }
+            url = 'https://rewards.subway.co.uk/tx-sub/members'
+            headers = {
+                "Accept-Encoding": "gzip",
+                "Authorization": token,
+                "Connection": "Keep-Alive",
+                "Host": "rewards.subway.co.uk",
+                "User-Agent": "okhttp/4.9.0"
+            }
 
-        response = requests.get(url, headers=headers)
+            response = requests.get(url, headers=headers)
 
-        if response.status_code == 200:
-            data = response.json()
+            if response.status_code == 200:
+                data = response.json()
 
-            loyalty_balance = str(data.get("loyaltyBalance"))
-            email = data.get("email")
-            first_name = data.get("firstName")
-            last_name = data.get("lastName")
+                loyalty_balance = str(data.get("loyaltyBalance"))
+                email = data.get("email")
+                first_name = data.get("firstName")
+                last_name = data.get("lastName")
 
-            # print(response.text.email + " " + response.text.firstName + " " + response.text.lastName + " " + response.text.loyaltyBalance)
-            print(loyalty_balance + " | " + email + " | " + first_name + " | " + last_name) 
+                # print(response.text.email + " " + response.text.firstName + " " + response.text.lastName + " " + response.text.loyaltyBalance)
+                print(info_formatting() + loyalty_balance + " | " + email + " | " + first_name + " | " + last_name) 
 
-            if float(loyalty_balance) >= 250:
-                accountsData[i]["points"] = loyalty_balance
+                if float(loyalty_balance) >= 250:
+                    accountsData[i]["points"] = loyalty_balance
+                else:
+                    accountsData.pop(i)
             else:
-                accountsData.pop(i)
-        else:
-            print(f"Request failed with status code: {response.text}")
+                print(f"Request failed with status code: {response.text}")
     
     return accountsData
 
@@ -323,10 +321,19 @@ def get_accounts_data():
 def get_random_account():
     try:
         # Assuming the JSON file is in the same directory as your script
-        json_file_path = './accounts.json'
+        json_file_path = './verified.json'
 
-        visitors.append("1")
-        print(info_formatting()+ "Visitors: " + str(len(visitors)))
+
+        with open('./visitors.json', 'r') as file:
+            visitors = json.load(file)
+
+        visitors.get("visitors").append("1")
+
+        print(info_formatting()+ "Visitors: " + str(len(visitors.get("visitors"))))
+
+        with open('./visitors.json', 'w') as file:
+            json.dump(visitors, file)
+
 
         # Load JSON data
         with open(json_file_path, 'r') as file:
@@ -342,6 +349,34 @@ def get_random_account():
             past_accounts.append(account)
             if len(past_accounts) > 10:
                 past_accounts.pop(0)
+            
+            # Delete account from verified.json and add it to accounts.json
+            data.pop(randomnum)
+
+            with open(json_file_path, "w") as f:
+                # save as a json object instead of a list of json objects
+                json.dump(data, f)
+
+            # Assuming the JSON file is in the same directory as your script
+            json_file_path = './accounts.json'
+
+            # Load JSON data
+            with open(json_file_path, 'r') as file:
+                data = json.load(file)
+
+            data.append(account)
+
+            with open(json_file_path, "w") as f:
+                # save as a json object instead of a list of json objects
+                json.dump(data, f)
+
+            print(info_formatting() + "Served account: " + str(account.get("email")))
+
+            # Check if scheduled task is running and if not, start it
+
+
+            scheduler.get_job(id='Scheduled Task').modify(next_run_time=datetime.now())
+
             
             return jsonify(account)     
     except Exception as e:
@@ -444,7 +479,16 @@ def generate_accounts(requestedEmails=0):
 
         x = requests.post(url, json=myobj, headers=headers)
 
-        print(formatting + "Attempting Account Registration: " + str(x.text))
+        print(formatting + "Attempting Account Registration: " + str(x.json().get("outComeMessage")))
+
+        
+        try:
+            if int(x.json().get("status")) == 500:
+                print(formatting + "Error creating account. Check the response for details.")
+                continue
+        except:
+            print()
+
         print(formatting + "Waiting for verification code...")
 
         time.sleep(7)
@@ -475,7 +519,7 @@ def generate_accounts(requestedEmails=0):
         if code:
             print(formatting + "Acquired verification code: " + str(code))
         else:
-            next()
+            continue
 
         url = 'https://rewards.subway.co.uk/tx-sub/registration/activation/' + code
 
