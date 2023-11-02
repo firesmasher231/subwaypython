@@ -14,7 +14,6 @@
 				background-color: #61a848; /* Subway Green Background */
 				color: #ffffff; /* White Text */
 
-				overflow: hidden;
 				padding: 2rem;
 			}
 			#container {
@@ -25,8 +24,6 @@
 				margin: 0 auto;
 				max-width: 400px;
 				position: relative; /* Make it a positioning context */
-
-				overflow: hidden;
 			}
 			#accountInfo {
 				margin: 20px;
@@ -211,6 +208,8 @@
 
 				emoji.style.left = `${left}px`;
 				emoji.style.top = `${top}px`;
+
+				console.log(translateX, translateY);
 				emoji.style.transform = `translate(${translateX}px, ${translateY}px)`;
 
 				// document.getElementById("body").appendChild(emoji);
