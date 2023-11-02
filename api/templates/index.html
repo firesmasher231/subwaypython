@@ -14,6 +14,7 @@
 				background-color: #61a848; /* Subway Green Background */
 				color: #ffffff; /* White Text */
 
+				overflow: hidden;
 				padding: 2rem;
 			}
 			#container {
@@ -22,8 +23,10 @@
 				padding: 20px;
 				text-align: center;
 				margin: 0 auto;
-				/* width: 100%; Set the container to full width */
 				max-width: 400px;
+				position: relative; /* Make it a positioning context */
+
+				overflow: hidden;
 			}
 			#accountInfo {
 				margin: 20px;
@@ -72,7 +75,7 @@
 				margin-bottom: 1rem;
 			}
 			.collapsible {
-                margin-top: 1rem;
+				margin-top: 1rem;
 				background-color: #61a848;
 				color: #e5ffde;
 				cursor: pointer;
@@ -102,9 +105,47 @@
 				border-bottom-left-radius: 15px;
 				border-bottom-right-radius: 15px;
 			}
+			.emojis-container::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+			}
+			.sandwich-emoji {
+				position: fixed;
+				width: 20px;
+				animation: moveAndRotate 5s linear, changeSize 2s alternate infinite;
+				transition: opacity 0.5s;
+				opacity: 0.2;
+				pointer-events: none;
+				font-size: 24px;
+			}
+			@keyframes moveAndRotate {
+				0% {
+					transform: translate(0, 0) rotate(0deg);
+					opacity: 0.2;
+				}
+				100% {
+					transform: translate(calc(100vw - 20px), calc(100vh - 20px))
+						rotate(360deg);
+					opacity: 0.2;
+				}
+			}
+			@keyframes changeSize {
+				0% {
+					width: 20px;
+				}
+				100% {
+					width: 50px;
+				}
+			}
 		</style>
 	</head>
 	<body>
+		<div class="emojis-container"></div>
 		<div id="container">
 			<h1><span style="font-size: 34px; color: #61a848">Sub</span>Savers 🥪</h1>
 			<div id="accountInfo">
@@ -158,6 +199,34 @@
 		</div>
 
 		<script>
+			function createRandomSandwichEmoji() {
+				const emoji = document.createElement("div");
+				emoji.className = "sandwich-emoji";
+				emoji.innerHTML = "🥪";
+
+				const left = Math.random() * window.innerWidth;
+				const top = Math.random() * window.innerHeight;
+				const translateX = Math.random() * window.innerWidth;
+				const translateY = Math.random() * window.innerHeight;
+
+				emoji.style.left = `${left}px`;
+				emoji.style.top = `${top}px`;
+				emoji.style.transform = `translate(${translateX}px, ${translateY}px)`;
+
+				// document.getElementById("body").appendChild(emoji);
+				document.querySelector(".emojis-container").appendChild(emoji);
+
+				setTimeout(() => {
+					emoji.style.opacity = 0.2;
+				}, 0);
+
+				setTimeout(() => {
+					emoji.remove();
+				}, 3000);
+			}
+
+			setInterval(createRandomSandwichEmoji, 500);
+
 			// JavaScript for toggling the collapsible section
 			var coll = document.querySelector(".collapsible");
 			var content = coll.nextElementSibling;
