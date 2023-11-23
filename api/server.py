@@ -124,6 +124,7 @@ def updatePointBalances(accountsData):
         if int(x.json().get("outcomeCode")) == -6:
             accountsData.pop(i)
         else:
+            
             # verify email code
 
             ## Get verification code
@@ -133,7 +134,7 @@ def updatePointBalances(accountsData):
 
             url = 'https://www.1secmail.com/api/v1/?action=getMessages&login=' + username + '&domain=' + domain
 
-            time.sleep(5)
+            time.sleep(10)
 
             while True:
                 response = requests.get(url)
@@ -226,6 +227,9 @@ def updatePointBalances(accountsData):
     
     return accountsData
 
+
+
+
 def verify_accounts(NumOfAccountsToCache):
     print(info_formatting() + "Received request to cache accounts: " + str(NumOfAccountsToCache))
 
@@ -315,6 +319,18 @@ def get_accounts_data():
         return jsonify(data)
     except Exception as e:
         return jsonify({'error': str(e)})
+
+@app.route('/cache-accounts', methods=['POST'])
+def cache_accounts():
+    try:
+        #get args
+        NumOfAccountsToCache = request.args.get('numberofemails')
+
+        verify_accounts(NumOfAccountsToCache)
+
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
 
 # make route to get one random account, implement logic to make sure it is not in the last 5 accounts served previously
 @app.route('/get-random-account', methods=['GET'])

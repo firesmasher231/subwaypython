@@ -19,6 +19,11 @@
     <button id="generateAccountsButton">Generate New Accounts</button>
     <div id="generateResult"></div>
 
+    <h2>Cache new accounts</h2>
+    <textarea id="cacheEmails" placeholder="Enter the number of accounts to cache"></textarea>
+    <button id="cacheAccountsButton">cache New Accounts</button>
+    <div id="cacheResult"></div>
+
     <h2 id="accounts-heading">Accounts</h2>
     <div id="accounts"></div>
 
@@ -95,6 +100,7 @@
                     });
             });
 
+
         // Generate New Accounts Button
         document
             .getElementById("generateAccountsButton")
@@ -128,6 +134,43 @@
                 } else {
                     document.getElementById("generateResult").textContent =
                         "Please enter a valid number of accounts to generate.";
+                }
+            });
+
+
+        // Cache New Accounts Button
+        document
+            .getElementById("cacheAccountsButton")
+            .addEventListener("click", function () {
+                var numberofemails = document
+                    .getElementById("cacheEmails")
+                    .value.trim();
+
+                if (numberofemails.match(/^\d+$/)) {
+                    document.getElementById("cacheResult").textContent =
+                        "Request to cache accounts sent..."; // Update the message
+                    fetch(ip + "/cache-accounts?numberofemails=" + numberofemails, {
+                        method: "POST",
+                    })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (data.error) {
+                                document.getElementById("cacheResult").textContent =
+                                    "Error: " + data.error;
+                            } else {
+                                document.getElementById("cacheResult").textContent =
+                                    "New accounts cached successfully.";
+                                fetchAccounts(); // Refresh account list
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Error:", error);
+                            document.getElementById("cacheResult").textContent =
+                                "An error occurred while generating new accounts.";
+                        });
+                } else {
+                    document.getElementById("cacheResult").textContent =
+                        "Please enter a valid number of accounts to cache.";
                 }
             });
     </script>
