@@ -87,8 +87,12 @@ def checkAccountInventory():
         verify_accounts(accounts_to_cache)
 
 def updatePointBalances(accountsData):
+
+    print(info_formatting() + "Running scheduled task to update point balances")
         
     for i in range(len(accountsData)-2):
+
+        print(info_formatting() + "Updating point balance for account: " + str(accountsData[i].get("email")))
 
         token = accountsData[i].get("token")
         email = accountsData[i].get("email")
@@ -250,6 +254,7 @@ def verify_accounts(NumOfAccountsToCache):
     with open(verified_json_file_path, 'r') as file:
         verified_data = json.load(file)
 
+    print(info_formatting() + "Accounts in cache: " + str(len(verified_data)))
 
     updatePointBalances(accounts_to_cache)
 
@@ -324,11 +329,12 @@ def get_accounts_data():
 def cache_accounts():
     try:
         #get args
-        NumOfAccountsToCache = request.args.get('numberofemails')
+        NumOfAccountsToCache = int(request.args.get('numberofemails'))
 
         verify_accounts(NumOfAccountsToCache)
-
+        return jsonify({"message": "Accounts cached and written to file"})
     except Exception as e:
+        print(e)
         return jsonify({'error': str(e)})
 
 
@@ -514,17 +520,26 @@ def generate_accounts(requestedEmails=0):
 
         url = 'https://www.1secmail.com/api/v1/?action=getMessages&login=' + username + '&domain=' + domain
 
+        attempts = 0
         while True:
+            if attempts > 10:
+                break
+
             response = requests.get(url)
             data = response.json()
 
             try:
                 emailid = data[0].get("id")
                 break
-            except:
+            except IndexError as e:
                 print(formatting + "No verification code found yet, retrying...")
                 time.sleep(5)
+                attempts +=1
                 continue
+
+        if attempts > 10:
+            print(formatting + "No verification code found after 10 attempts, skipping...")
+            continue
 
         url = 'https://www.1secmail.com/api/v1/?action=readMessage&login=' + username + '&domain=' + domain + '&id=' + str(emailid)
 
