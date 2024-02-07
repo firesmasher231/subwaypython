@@ -20,11 +20,11 @@ visitors = []
 
 interval = 60*15
 
-threshold = 200
+threshold = 100
 overflow = 25
 
 cache_threshold = 10
-cache_overflow = 10
+cache_overflow = 2
 
 
 # Path to your SSL certificate and key files
@@ -86,11 +86,55 @@ def checkAccountInventory():
     if len(data) < cache_threshold:
         verify_accounts(accounts_to_cache)
 
+
+def verify_accounts(NumOfAccountsToCache):
+    print(info_formatting() + "Received request to cache accounts: " + str(NumOfAccountsToCache))
+
+    # Assuming the JSON file is in the same directory as your script
+    json_file_path = './accounts.json'
+
+    # Load accounts data which is in accounts.json file but is in a list of json objects
+    with open(json_file_path, 'r') as file:
+        data = json.load(file)
+
+    # get the first NumOfAccountsToCache accounts from the accounts.json file
+    accounts_to_cache = data[:NumOfAccountsToCache]
+
+    # Assuming the JSON file is in the same directory as your script
+    verified_json_file_path = './verified.json'
+
+    # Load accounts data which is in accounts.json file but is in a list of json objects
+    with open(verified_json_file_path, 'r') as file:
+        verified_data = json.load(file)
+
+    print(info_formatting() + "Accounts in cache: " + str(len(verified_data)))
+
+    updatePointBalances(accounts_to_cache)
+
+    verified_data.extend(accounts_to_cache)
+
+    with open(verified_json_file_path, "w") as f:
+        # save as a json object instead of a list of json objects
+        json.dump(verified_data, f)
+
+    with open(json_file_path, "w") as f:
+        # save as a json object instead of a list of json objects
+        json.dump(data[NumOfAccountsToCache:], f)
+
+    print(info_formatting() + "Accounts cached to file: " + verified_json_file_path)
+
+    return jsonify({"message": "Accounts cached and written to file", "accounts": accounts_to_cache})
+
 def updatePointBalances(accountsData):
 
     print(info_formatting() + "Running scheduled task to update point balances")
         
     for i in range(len(accountsData)-2):
+
+        # random time delay between 20 and 40 seconds
+        wait_time = random.randint(60, 120)
+        print(info_formatting() + "Waiting for random time delay: " + str(wait_time) + " seconds")
+        time.sleep(wait_time)
 
         print(info_formatting() + "Updating point balance for account: " + str(accountsData[i].get("email")))
 
@@ -140,7 +184,9 @@ def updatePointBalances(accountsData):
 
             time.sleep(10)
 
-            while True:
+            retries = 0
+
+            while retries < 15:
                 response = requests.get(url)
 
                 data = response.json()
@@ -151,6 +197,7 @@ def updatePointBalances(accountsData):
                 except:
                     print(info_formatting() + "No verification code found yet, retrying...")
                     time.sleep(5)
+                    retries +=1
                     continue
 
             url = 'https://www.1secmail.com/api/v1/?action=readMessage&login=' + username + '&domain=' + domain + '&id=' + str(emailid)
@@ -232,45 +279,8 @@ def updatePointBalances(accountsData):
     return accountsData
 
 
+# checkAccountInventory()
 
-
-def verify_accounts(NumOfAccountsToCache):
-    print(info_formatting() + "Received request to cache accounts: " + str(NumOfAccountsToCache))
-
-    # Assuming the JSON file is in the same directory as your script
-    json_file_path = './accounts.json'
-
-    # Load accounts data which is in accounts.json file but is in a list of json objects
-    with open(json_file_path, 'r') as file:
-        data = json.load(file)
-
-    # get the first NumOfAccountsToCache accounts from the accounts.json file
-    accounts_to_cache = data[:NumOfAccountsToCache]
-
-    # Assuming the JSON file is in the same directory as your script
-    verified_json_file_path = './verified.json'
-
-    # Load accounts data which is in accounts.json file but is in a list of json objects
-    with open(verified_json_file_path, 'r') as file:
-        verified_data = json.load(file)
-
-    print(info_formatting() + "Accounts in cache: " + str(len(verified_data)))
-
-    updatePointBalances(accounts_to_cache)
-
-    verified_data.extend(accounts_to_cache)
-
-    with open(verified_json_file_path, "w") as f:
-        # save as a json object instead of a list of json objects
-        json.dump(verified_data, f)
-
-    with open(json_file_path, "w") as f:
-        # save as a json object instead of a list of json objects
-        json.dump(data[NumOfAccountsToCache:], f)
-
-    print(info_formatting() + "Accounts cached to file: " + verified_json_file_path)
-
-    return jsonify({"message": "Accounts cached and written to file", "accounts": accounts_to_cache})
 
 # @app.route('/')
 # def index():
@@ -460,6 +470,13 @@ def generate_accounts(requestedEmails=0):
     emails = response.json()
 
     for email in emails:
+
+        # random time delay between 20 and 40 seconds
+        wait_time = random.randint(60, 120)
+        print(info_formatting() + "Waiting for random time delay: " + str(wait_time) + " seconds")
+        time.sleep(wait_time)
+
+
         i += 1
         genCounter += 1
 
@@ -699,7 +716,8 @@ if __name__ == '__main__':
     scheduler.start()
 
     context = (cert_file, key_file)
-    serve(app, host="0.0.0.0", port=3000, url_scheme='https')
+    # serve(app, host="0.0.0.0", port=3000, url_scheme='https')
 
-    serve(app, host="0.0.0.0", port=3000)
+    serve(app, port=3001)
+    # serve(app, host="0.0.0.0", port=3000)
     # app.run(debug=True, host='0.0.0.0', port=3000)
