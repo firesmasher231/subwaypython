@@ -328,7 +328,15 @@ def get_accounts_data():
 
         # Load JSON data
         with open(json_file_path, 'r') as file:
-            data = json.load(file)
+            data[0] = json.load(file)
+
+        verified_json_file_path = './verified.json'
+
+        # Load JSON data
+        with open(verified_json_file_path, 'r') as file:
+            data[1] = json.load(file)
+
+            
 
         # Serve the JSON data
         return jsonify(data)

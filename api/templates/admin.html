@@ -24,6 +24,7 @@
     <button id="cacheAccountsButton">cache New Accounts</button>
     <div id="cacheResult"></div>
 
+    <h2 id="verified-accounts-heading">Cached Accounts</h2>
     <h2 id="accounts-heading">Accounts</h2>
     <div id="accounts"></div>
 
@@ -32,14 +33,24 @@
         var ip = "http://132.226.131.86:3001";
 
         // Function to display accounts as JSON
-        function displayAccounts(accounts) {
+        function displayAccounts(data) {
+            var accounts = data[0]
+            var verifiedAccounts = data[1]
             var headingElement = document.getElementById("accounts-heading");
+            var verifiedHeadingElement = document.getElementById("verified-accounts-heading");
 
             if (accounts.length == 0) {
                 headingElement.textContent = "No accounts found.";
                 return;
             } else {
                 headingElement.textContent = "Accounts: " + accounts.length;
+            }
+
+            if (verifiedAccounts.length == 0) {
+                verifiedHeadingElement.textContent = "No verified accounts found.";
+                return;
+            } else {
+                verifiedHeadingElement.textContent = "Cached Accounts: " + verifiedAccounts.length;
             }
 
             var accountsElement = document.getElementById("accounts");
