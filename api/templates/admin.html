@@ -39,6 +39,12 @@
             var headingElement = document.getElementById("accounts-heading");
             var verifiedHeadingElement = document.getElementById("verified-accounts-heading");
 
+            alert(data)
+            alert(data[0])
+            alert(data[1])
+            alert(verifiedAccounts.length)
+            alert(accounts.length)
+
             if (accounts.length == 0) {
                 headingElement.textContent = "No accounts found.";
                 return;
