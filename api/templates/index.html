@@ -196,6 +196,153 @@
 		</div>
 
 		<script>
+			const data = [
+				{
+					email: "4wdmp2u@vjuum.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ1OTMwLCJ0cmFkZXJJZCI6IjE3NDkzOTk5NCIsInVzZXJOYW1lIjoiNHdkbXAydUB2anV1bS5jb20iLCJpYXQiOjE3MDA4NDIzMzAsInVzZXJJZCI6IjE3NDkzOTk5NCIsInByb2dyYW1JZCI6IjYifQ.0jpe6QLKksfqu1q4IBo85HcsJ830r9k_Kcm6w5sPcw4",
+					masterToken: "NDI5NGQxNDk0MWVhNGZjYjljNzZiZDQ2YTdmZDM1MDc=",
+					loyaltyId: "6338450273100948",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450273100948",
+					points: "250",
+					squadCode: "b1iufn",
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "6a1nydsfhh@ezztt.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MDcwLCJ0cmFkZXJJZCI6IjE3NDk0MDAxNSIsInVzZXJOYW1lIjoiNmExbnlkc2ZoaEBlenp0dC5jb20iLCJpYXQiOjE3MDA4NDI0NzAsInVzZXJJZCI6IjE3NDk0MDAxNSIsInByb2dyYW1JZCI6IjYifQ.Aqti6w-3dM8bP3xiNbdb277PWi5QY1pYWTcjjFk1cUI",
+					masterToken: "MTQxOTVmYTU3YTAwNGMzN2IyY2RkNDJkZjJhY2U5Y2E=",
+					loyaltyId: "6338450253520164",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450253520164",
+					points: 250,
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "bm2vukabw62j@icznn.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MTAyLCJ0cmFkZXJJZCI6IjE3NDk0MDAyMyIsInVzZXJOYW1lIjoiYm0ydnVrYWJ3NjJqQGljem5uLmNvbSIsImlhdCI6MTcwMDg0MjUwMiwidXNlcklkIjoiMTc0OTQwMDIzIiwicHJvZ3JhbUlkIjoiNiJ9.vn4jGrfN0rJP0Dut7wJGeeUu6m8rFF_1P5jGAymH8X4",
+					masterToken: "N2JkNzc5MDViZDkwNDRjYmIwZjgwNjk5Njk2MGQwMjU=",
+					loyaltyId: "6338450249795508",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450249795508",
+					points: 250,
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "faxha8oe1@txcct.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MTM5LCJ0cmFkZXJJZCI6IjE3NDk0MDAzMCIsInVzZXJOYW1lIjoiZmF4aGE4b2UxQHR4Y2N0LmNvbSIsImlhdCI6MTcwMDg0MjUzOSwidXNlcklkIjoiMTc0OTQwMDMwIiwicHJvZ3JhbUlkIjoiNiJ9.3JnoamziNneP4Iy-XErXZehEYpQMoHrR7WkS4LgzsmY",
+					masterToken: "NTJjMWJjZWYxNDdmNDcxMTlkMDA4NzYxODE1NmFiOTM=",
+					loyaltyId: "6338450240568813",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450240568813",
+					points: 250,
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "dn8kby4okzu@vjuum.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MjMxLCJ0cmFkZXJJZCI6IjE3NDk0MDA0NSIsInVzZXJOYW1lIjoiZG44a2J5NG9renVAdmp1dW0uY29tIiwiaWF0IjoxNzAwODQyNjMxLCJ1c2VySWQiOiIxNzQ5NDAwNDUiLCJwcm9ncmFtSWQiOiI2In0.jPgyk8tQ7Polanceuy6yYT1sJTnBlDyZdshrlXVOXDw",
+					masterToken: "Y2MxMTA2NDBhZWQzNDRlOTkwYjQwMTdmMWQxN2JiNGI=",
+					loyaltyId: "6338450266076931",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450266076931",
+					points: "250",
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "99d86uo4w@vjuum.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MjU1LCJ0cmFkZXJJZCI6IjE3NDk0MDA1MSIsInVzZXJOYW1lIjoiOTlkODZ1bzR3QHZqdXVtLmNvbSIsImlhdCI6MTcwMDg0MjY1NSwidXNlcklkIjoiMTc0OTQwMDUxIiwicHJvZ3JhbUlkIjoiNiJ9.q3UQPXKp3b9faOcAYnjBsg_FD4b6oycZ0F0yvP653SQ",
+					masterToken: "YTQxMTdlNDUzYzU5NDQzNTlhOGNlNDZkNjJkZjM1NzU=",
+					loyaltyId: "6338450252108821",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450252108821",
+					points: 250,
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "dvllmjbvxx@icznn.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MjY0LCJ0cmFkZXJJZCI6IjE3NDk0MDA1MiIsInVzZXJOYW1lIjoiZHZsbG1qYnZ4eEBpY3pubi5jb20iLCJpYXQiOjE3MDA4NDI2NjQsInVzZXJJZCI6IjE3NDk0MDA1MiIsInByb2dyYW1JZCI6IjYifQ.Kgw3ZOKSFGfji-gGOuovPPGbyWBJNT84wsE8JEE-5O4",
+					masterToken: "ZmMxYjlhYjE1OWUzNDQyMTkxOWRiMDNlMDdlZWJmOTk=",
+					loyaltyId: "6338450272043826",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450272043826",
+					points: "250",
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "qulyhe@vjuum.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MzM3LCJ0cmFkZXJJZCI6IjE3NDk0MDA1OSIsInVzZXJOYW1lIjoicXVseWhlQHZqdXVtLmNvbSIsImlhdCI6MTcwMDg0MjczNywidXNlcklkIjoiMTc0OTQwMDU5IiwicHJvZ3JhbUlkIjoiNiJ9.hQVYp9Fe34m8D039XhGc_pC3GqCjiz9lmzGctqUL5lA",
+					masterToken: "YWRhOWU3NWQ3ODAwNDRkMmJjYzM3MDY1NzA0YjQxMGI=",
+					loyaltyId: "6338450244566581",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450244566581",
+					points: 250,
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "jk1xksr3dh7@txcct.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MzQ2LCJ0cmFkZXJJZCI6IjE3NDk0MDA2MCIsInVzZXJOYW1lIjoiamsxeGtzcjNkaDdAdHhjY3QuY29tIiwiaWF0IjoxNzAwODQyNzQ2LCJ1c2VySWQiOiIxNzQ5NDAwNjAiLCJwcm9ncmFtSWQiOiI2In0.sx-Gm_Jn7GBt0JvzEWJI-5GxGiz4Qv8y8Drj3VUZth4",
+					masterToken: "ZmZiMzAzOTdiNzRmNDZiNDk5NTAwZWY1YzNkYTRiMGI=",
+					loyaltyId: "6338450274888335",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450274888335",
+					points: 250,
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "3ny40c@laafd.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MzU1LCJ0cmFkZXJJZCI6IjE3NDk0MDA2MiIsInVzZXJOYW1lIjoiM255NDBjQGxhYWZkLmNvbSIsImlhdCI6MTcwMDg0Mjc1NSwidXNlcklkIjoiMTc0OTQwMDYyIiwicHJvZ3JhbUlkIjoiNiJ9.CK0KTYpDHCmigLeO4qOLwBK1jLiRQ4tu88AL52ntcKs",
+					masterToken: "YTg3NmU2YzcxMWQxNDg5YmE5MjRhZjljZGQ2ZTk0Njg=",
+					loyaltyId: "6338450279292566",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450279292566",
+					points: "250",
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "0vn14oh6bl@laafd.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MzY0LCJ0cmFkZXJJZCI6IjE3NDk0MDA2NCIsInVzZXJOYW1lIjoiMHZuMTRvaDZibEBsYWFmZC5jb20iLCJpYXQiOjE3MDA4NDI3NjQsInVzZXJJZCI6IjE3NDk0MDA2NCIsInByb2dyYW1JZCI6IjYifQ.TN9ZeahMZKInz-xvAfNaiobuuhLqj87BicJmuZJItnI",
+					masterToken: "MzE2OTQ0ZTc4NDdmNDUyNmIyYzE4MjY4ZGFmMTUxOTM=",
+					loyaltyId: "6338450224211166",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450224211166",
+					points: 250,
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+				{
+					email: "j9pzjh0w4oc@icznn.com",
+					token:
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2R1bGVDb2RlIjoiU1VCX1NUT1JNQk9STiIsImlzcyI6IlRyYW54YWN0b3IgTHRkIiwidXNlclR5cGUiOiIxIiwiZXhwIjoxNzAwODQ2MzczLCJ0cmFkZXJJZCI6IjE3NDk0MDA2NSIsInVzZXJOYW1lIjoiajlwempoMHc0b2NAaWN6bm4uY29tIiwiaWF0IjoxNzAwODQyNzczLCJ1c2VySWQiOiIxNzQ5NDAwNjUiLCJwcm9ncmFtSWQiOiI2In0.Va2Bpq0HQgMq_okYp9TX6BMuyzj0T8H9QfuywOHRd9g",
+					masterToken: "YTUzZWVjOGNhMTA2NGRmMzhkMTg0Yzg1OTgwYzQwNjM=",
+					loyaltyId: "6338450285417066",
+					qrcode:
+						"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=6338450285417066",
+					points: 250,
+					squadCode: null,
+					referralCode: "X-63632KO",
+				},
+			];
+
 			function generateRandomInteger(min, max) {
 				return Math.floor(min + Math.random() * (max - min + 1));
 			}
@@ -208,7 +355,6 @@
 				const top = Math.random() * window.innerHeight;
 				const translateX = generateRandomInteger(-1, 1) * window.innerWidth;
 				const translateY = generateRandomInteger(-1, 1) * window.innerHeight;
-
 
 				emoji.style.left = `${left}px`;
 				emoji.style.top = `${top}px`;
@@ -250,24 +396,29 @@
 				}
 			});
 
-			var ip =
-				"https://api.codetabs.com/v1/proxy/?quest=http://132.226.131.86:3001";
-
 			// Function to fetch and display a random account
 			function fetchRandomAccount() {
-				fetch(ip + "/get-random-account")
-					.then((response) => response.json())
-					.then((account) => {
-						document.getElementById("accountEmail").textContent =
-							"Email: " + account.email;
-						document.getElementById("accountPoints").textContent =
-							"Points: " + account.points;
-						// Set the QR code image source
-						document.getElementById("qrcode").src = account.qrcode;
-					})
-					.catch((error) => {
-						console.error("Error:", error);
-					});
+				// fetch(ip + "/get-random-account")
+				// 	.then((response) => response.json())
+				// 	.then((account) => {
+				// 		document.getElementById("accountEmail").textContent =
+				// 			"Email: " + account.email;
+				// 		document.getElementById("accountPoints").textContent =
+				// 			"Points: " + account.points;
+				// 		// Set the QR code image source
+				// 		document.getElementById("qrcode").src = account.qrcode;
+				// 	})
+				// 	.catch((error) => {
+				// 		console.error("Error:", error);
+				// 	});
+				var account = data[generateRandomInteger(0, data.length - 1)];
+
+				document.getElementById("accountEmail").textContent =
+					"Email: " + account.email;
+				document.getElementById("accountPoints").textContent =
+					"Points: " + account.points;
+				// Set the QR code image source
+				document.getElementById("qrcode").src = account.qrcode;
 			}
 
 			// Initial fetch of a random account
@@ -284,25 +435,26 @@
 			document
 				.getElementById("deleteButton")
 				.addEventListener("click", function () {
-					fetch(
-						ip +
-							"/delete-account?email=" +
-							document
-								.getElementById("accountEmail")
-								.textContent.split(":")[1]
-								.trim(),
-						{
-							method: "POST",
-						}
-					)
-						.then((response) => response.json())
-						.then((data) => {
-							// After deleting the account, fetch and display a new random account
-							fetchRandomAccount();
-						})
-						.catch((error) => {
-							console.error("Error:", error);
-						});
+					// fetch(
+					// 	ip +
+					// 		"/delete-account?email=" +
+					// 		document
+					// 			.getElementById("accountEmail")
+					// 			.textContent.split(":")[1]
+					// 			.trim(),
+					// 	{
+					// 		method: "POST",
+					// 	}
+					// )
+					// 	.then((response) => response.json())
+					// 	.then((data) => {
+					// 		// After deleting the account, fetch and display a new random account
+					// 		fetchRandomAccount();
+					// 	})
+					// 	.catch((error) => {
+					// 		console.error("Error:", error);
+					// 	});
+					fetchRandomAccount();
 				});
 		</script>
 	</body>
